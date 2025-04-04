@@ -66,6 +66,10 @@
   "C_Cpp_Runner.useLinkTimeOptimization": false,
   "C_Cpp_Runner.msvcSecureNoWarnings": false,
   "cSpell.words": [
-    "recompilación"
+    "direccionable",
+    "preprocesador",
+    "PREPROCESADOR",
+    "recompilación",
+    "scanf"
   ]
 }

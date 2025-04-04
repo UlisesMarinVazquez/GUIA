@@ -37,28 +37,12 @@
 - [3. Tipos de Operadores en C](#tipos-de-operadores-en-c-estándar)
 </details>
 
-```text
-
-```
 
 ## **Conceptos Fundamentales de programación**
 
-`PROGRAMACIÓN:` 
+`PROGRAMACIÓN.` Es el proceso de escritura o codificación de un programa.
 
-```text
-Es el proceso de escritura o codificación de un programa.
-```
-
-`SOFTWARE:` 
-```text
-Es un conjunto de instrucciones de 
-programa detalladas que controlan 
-y coordinan los componentes del 
-hardware de una computadora,
-además controlan las operaciones 
-de un sistema informático.
-```
-
+`SOFTWARE:` Es un conjunto de instrucciones de programa detalladas que controlan y coordinan los componentes del hardware de una computadora y controlan las operaciones de un sistema informático.
 
 `SISTEMA OPERATIVO:` Es el software de sistema que controla, gestiona o administra los recursos de la computadora.
 
@@ -92,7 +76,8 @@ Alto Nivel / lenguaje humano  → Bajo Nivel / Lenguaje máquina
 FASES: 
 - Realiza de forma simultánea e inmediata la traducción y ejecución (ambas).
 - Traduce cada instrucción y a continuación se ejecuta.
-- Intérprete NO genera programas "objeto" (ya traducido) ni programas "ejecutables" (Conjunto de instrucciones para un fin específico), (los programas objeto da los programas ejecutables). 
+- Intérprete NO genera programas "objeto" (ya traducido) ni programas "ejecutables" 
+  (Conjunto de instrucciones para un fin específico), (los programas objeto da los programas ejecutables). 
       
 CARACTERÍSTICAS:
 - Portabilidad o transportabilidad
@@ -103,7 +88,8 @@ CARACTERÍSTICAS:
 
 Los compiladores requieren forzosamente un Intérprete.
 
-- Son traductores empleados para lenguajes de ALTO NIVEL, en los cuales cada instrucción escrita corresponde a varias instrucciones en lenguaje MÁQUINA.
+- Son traductores empleados para lenguajes de ALTO NIVEL, en los cuales cada instrucción escrita 
+  corresponde a varias instrucciones en lenguaje MÁQUINA.
 - Programa escrito en el compilador → Programa fuente (código fuente)
 - Compilador → genera programa traducido (prog. objeto) → programa ejecutable
 
@@ -133,7 +119,7 @@ Los compiladores requieren forzosamente un Intérprete.
 
 ## TIPOS DE OPERADORES EN C ESTÁNDAR.
 
-### ► OPERADORES ARITMÉTICOS
+### ► OA - OPERADORES ARITMÉTICOS
 
 | Operación       | Símbolo(s) | Sintaxis de ejemplo          |
 |-----------------|------------|------------------------------|
@@ -144,7 +130,7 @@ Los compiladores requieren forzosamente un Intérprete.
 | Módulo          | `%`        | `R = A % B` , `R = A mod B`  |
 |
 
-### ► OPERADORES RELACIONALES.
+### ► OR - OPERADORES RELACIONALES.
 
  Sirven para realizar comparaciones entre distintos valores con el objetivo de tomar decisiones.
 <br>Se establece una relación entre los datos y pueden tener como resultados dos valores: <br> *verdadero (1)  o falso (0)*
@@ -159,7 +145,7 @@ Los compiladores requieren forzosamente un Intérprete.
 | `!=`    | Diferente que        | `A != B`  |
 |
 
-### ► OPERADORES LÓGICOS.
+### ► OL - OPERADORES LÓGICOS.
 
 | Símbolo   | Descripción     | Ejemplo           
 |-----------|-----------------|-------------------
@@ -204,157 +190,180 @@ Resultados: `a1 es 10 y a2 es 0`
 | `%=`     | `a %= 3`| `a = a % 3`  | Módulo y asigna     |10 → 1                             |
 |
 
+### ` Prioridades de los operadores. `
 
-Prioridades de los operadores:
-
-    1. ()
-    2. !, ++, -- negación, incremente, decremento
-    3. * , /, %
-    4. +, -
-    5. == , !=,<, >, <= , >= operadores relacionales
-    6. && , || operadores lógicos
-    7. , coma 
-
-    coma 
-
-    y=7;
-    x=(y=2, 10);
-
-    x=9
-    x=10
-
-▲ SINTAXIS DE DATOS Y OPERADORES EN LENGUAJE C.
-
-Unidades de información.
-     
-     - Bit: es la unidad mínima de información. (binary digit).
-     - Byte: unidad fundamental de la información. 8 bits = octeto.
-     - Nibble: representa un 1/2 byte = 4 bits= cuarteto.
-     - Palabra en programación = conjunto de bytes.
-
-Unidades de medida de memoria.
-     - Celda de memoria: cada celda tiene una única dirección que indica su posición relativa en la memoria.
-     - Byte = posición de memoria de 8 bits.
-     - Dirección: a cada byte se asocia un número denominado dirección. El CONTENIDO es la información almacenada en una posición.
+| Orden  | Símbolo    | Operador    |
+|--------|------------|-------------|
+```text
+1°         ()           Paréntesis
+-------------------------------------
+2°      !  ++  --       NOT, INC, DEC
+-------------------------------------
+3°      *  /  %         OA 
+-------------------------------------
+4°      +     -         OA
+-------------------------------------
+        ==   != 
+5°      <    <= 
+        >    >=         OR 
+------------------------------------
+6°      &&  ||  !       OL
+------------------------------------
+7°      ,              Coma 
+```
+---
 
 
+📊 Unidades de Información
+
+| Unidad           | Tamaño         | Equivalencia          | Descripción                                  |Ejemplo de uso                  |
+|------------------|----------------|-----------------------|----------------------------------------------|--------------------------------|
+| **Bit**          | 1 bit          | -                     | Unidad mínima (binary digit)                 |`1`/`0` (encendido/apagado)     |
+| **Nibble**       | 4 bits         | ½ byte                | Conocido como "cuarteto"                     |`1101` (un dígito hexadecimal)  |
+| **Byte**         | 8 bits         | 1 byte = 2 nibbles    | Unidad fundamental de información            |`01000001` (letra 'A' en ASCII) |
+| **Palabra**      | 16/32/64b      | Múltiples bytes       | Depende de la arquitectura del sistema       |Tamaño de registro del CPU      |
+|
+
+🖥️ Unidades de Medida de Memoria
+
+| Concepto                | Tamaño         | Característica Principal                          | Ejemplo                   |
+|-------------------------|----------------|---------------------------------------------------|---------------------------|
+| **Celda de memoria**    | Variable       | Dirección única de posición                       |`0x7FFF`                   |
+| **Byte**                | 8 bits         | Unidad básica direccionable                       |Almacena 1 carácter ASCII  |
+| **Dirección de memoria**| -              | Número asociado a cada byte                       |Hexadecimal (ej: `0x1000`) |
+| **Contenido**           | Variable       | Información almacenada en una posición            |                           | 
+|
 
 
-    ► TIPOS DE DATOS Y OPERADORES EN LENGUAJE C.
+ ### ► TIPOS DE DATOS Y OPERADORES EN LENGUAJE C.
 
-    DATO. Es la representación de su estado más simple por sí mismo no comunica algo (hasta asociarse).
+`DATO:` Es la representación de su estado más simple por sí mismo no comunica algo (hasta asociarse).
 
+`TIPO DE DATO.` El COMPILADOR declara los tipos de datos y los lee de la memoria principal.
 
-      • TIPO DE DATO.
-        
-        El COMPILADOR declara los tipos de datos y los lee de la memoria principal.
+`¿Qué es un TIPO DE DATO?` (Es la representación de mis variables).
+- Un tipo de DATO expresa una característica o atributo de almacenamiento en memoria 
+  que puede describir a todo un conjunto de variables utilizadas en la programación.
+- Los tipos de DATOS sirven para "declarar" variables de SALIDA / ENTRADA (S/E), es decir, 
+  darlos a conocer al compilador y que este pueda utilizarlas.
 
-        ¿Qué es un TIPO DE DATO? (Es la representación de mis variables).
-
-          - Un tipo de DATO expresa una característica o atributo de almacenamiento en memoria que puede describir a todo un conjunto de variables utilizadas en la programación.
-
-          - Los tipos de DATOS sirven para "declarar" variables de SALIDA / ENTRADA (S/E), es decir, darlos a conocer al compilador y que este pueda utilizarlas.
-
-      
-      • DECLARACIÓN DE VARIABLES.
-
-      Variable: Es un espacio reservado en memoria, definido por un tipo de dato y un nombre asignado, en el cual se puede guardar un valor y se puede modificar.
+`DECLARACIÓN DE VARIABLES.`
+`Variable:` Es un espacio reservado en memoria, definido por un tipo de dato y un nombre asignado, en el cual se puede guardar un valor y se puede modificar.
       (el valor cambiará durante la ejecución de su programa).
 
+`Declaración de variable.` Es una instanciación o alojamiento de una variable o un dato, que significa asignar un espacio en la memoria principal.
 
-        Declaración de variable. Es una instanciación o alojamiento de una variable o un dato, que significa asignar un espacio en la memoria principal.
+  - *instanciación:* es el proceso de leer o especificar información, como los valores y el tipo de almacenamiento de un campo de datos.
 
-        *instanciación: es el proceso de leer o especificar información, como los valores y el tipo de almacenamiento de un campo de datos
+📊 **Tabla de Tipos de Datos en C**
 
-    ## 📊 Tabla de Tipos de Datos en C
-
-| Tipo de Dato   | Palabra Clave | Tamaño (bytes) | Descripción                                                                 |
-|----------------|---------------|----------------|-----------------------------------------------------------------------------|
-| **Carácter**   | `char`        | 1              | Almacena caracteres del abecedario, dígitos y símbolos especiales.          |
-| **Entero**     | `int`         | 2              | Números enteros con signo (positivos y negativos).                          |
-| **Flotante**   | `float`       | 4              | Números reales con parte entera y decimal (positivos y negativos).          |
-| **Doble**      | `double`      | 8              | Números reales con mayor precisión que `float` (más capacidad de memoria).  |
+| Tipo de Dato   | Palabra Clave | Tamaño (bytes) | Descripción                                                                                                                                          |
+|----------------|---------------|----------------|------------------------------------------------------------------------------------------------------------------------------------------------------|
+| **Carácter**   | `char`        | 1              | Almacena caracteres del abecedario, dígitos y símbolos especiales. <br> Ej: Almacena `A-Z`, `0-9` y símbolos como `!@#`                              |
+| **Entero**     | `int`         | 2              | Números enteros con signo (positivos y negativos). <br>Ej: `-32768` a `32767` (con signo).                                                           |
+| **Flotante**   | `float`       | 4              | Números reales con parte entera y decimal (positivos y negativos). <br> Ej: `3.1416`, `-45.78` (6-7 dígitos decimales).                              |
+| **Doble**      | `double`      | 8              | Números reales con mayor precisión que `float` (más capacidad de memoria).   <br>Ej: `1.7976931348623157e+308` (15 dígitos decimales de precisión).  |
 
 ## 📊 Tabla de Tipos de Datos en C
 
-| Tipo          | Keyword    | Tamaño | Descripción                                                                 |
-|---------------|------------|--------|-----------------------------------------------------------------------------|
-| 🔤 Carácter   | `char`     | 1 byte | Almacena `A-Z`, `0-9` y símbolos como `!@#`.                               |
-| 🔢 Entero     | `int`      | 2 bytes| Ej: `-32768` a `32767` (con signo).                                        |
-| ⚖️ Flotante  | `float`    | 4 bytes| Ej: `3.1416`, `-45.78` (6-7 dígitos decimales).                            |
-| 🎯 Doble     | `double`   | 8 bytes| Ej: `1.7976931348623157e+308` (15 dígitos decimales de precisión).         |
 
 ▲ SINTAXIS - DECLARACIÓN DE LAS VARIABLES C.
 
-      • DECLARAR: 
-      Es la instrucción en la cual se incluye el tipo de dato de la variable y dicha variable se utiliza en el desarrollo del programa. 
+`DECLARAR:` Es la instrucción en la cual se incluye el tipo de dato de la variable y dicha variable se utiliza en el desarrollo del programa. 
 
-     Tipo_de_dato NOMBRE_VARIABLE/ES;
-                                        char PUERTA, LETRA, A;
-                                        int A, X1, B_2;
-                                        float ALTURA, PROMEDIO, AUMENTO_SALDO;
-                                        double VELOCIDAD, PI_FACTORIAL, LOGARITMO;  
+**Tipo_de_dato** *NOMBRE_VARIABLE/ES;*
+```c
+char PUERTA, LETRA, A;
+int A, X1, B_2;
+float ALTURA, PROMEDIO, AUMENTO_SALDO;
+double VELOCIDAD, PI_FACTORIAL, LOGARITMO; 
+```` 
 
+###  ESTRUCTURA GENERAL DE UN PROGRAMA EN LENGUAJE C.
 
-▲ ESTRUCTURA GENERAL DE UN PROGRAMA EN LENGUAJE C.
+**SECCIÓN 1 - DIRECTIVOS PARA EL PREPROCESADOR.**
 
-    • SECCIÓN 1 - DIRECTIVOS PARA EL PREPROCESADOR.
-       
-       -El preprocesador son las instrucciones que se le va a dar al compilador a lenguajes de bajo nivel.
-       -Son los archivos "include" que contiene las librerias o bibliotecas de funciones, en esta sección se pueden definir las constantes.
+El preprocesador son las instrucciones que se le va a dar al compilador a lenguajes de bajo nivel.
+<br>Son los archivos "include" que contiene las librerías o bibliotecas de funciones, en esta sección se pueden definir las constantes.
 
-       #include <libreria>
-       #define NOMBRE_DE_CONSTANTE VALOR
+**#include** `<libreria>` <br>
+**#define** *NOMBRE_DE_CONSTANTE VALOR*
 
-```c                                 
+```c                               
 #include <stdio.h>
 #include <conio.h>
 #include <math.h>
 #define PI 3.1416
 ```
+**SECCIÓN 2 - DECLARACIONES GLOBALES.**
 
-                                        
+Se definen: 
+```c
+- Tipos de datos           
+- Variables de E/S        float RADIO, AREA, B;
+- Prototipo de función    float AREA_CILINDRO (int, float, double);
+```
 
-    • SECCIÓN 2 - DECLARACIONES GLOBALES.
-       
-       Se definen los 
+**SECCIÓN 3 - PROGRAMA PRINCIPAL.**
 
-        -Tipos de datos           
-        -Variables de E/S                float RADIO, AREA, B;
-        -Prototipo de función            float AREA_CILINDRO (int, float, double);
+En esta sección se escribe cada una de las instrucciones del programa y expresiones que se van a ejecutar.
+```c
+Función principal  "main"
 
-    • SECCIÓN 3 - PROGRAMA PRINCIPAL.
-
-       En esta sección se escribe cada una de las instrucciones del programa y expresiones que se van a ejecutar.
-
-       Función principal  "main"        
-                                       void main()
-                                       {
-                                        /* sentencias o instrucciones ejecutables
-
-                                        printf("");        para que lea que debe ingresar estradas el usuario 
-                                        scantf("%i", &A);  
-                                        
-                                        D=(B*B)-(4*A*C);   proceso
-                                        
-                                        printf(" %i", A);  imprime la variable de salida*/     
-
-                                        getch();
+void main()
+{
+// Sentencias o instrucciones ejecutables
 }
-                                        
-    • SECCIÓN 4 - DEFINICIONES PARA LAS FUNCIONES DE USUARIO.
 
-       En esta sección se escribe cada una de las subrutinas diseñadas por el programador, se especifican todas las instrucciones que incluye las sentencias de E/S, procesos, estructuras de control e incluso otras subrutinas (si existe más de 1 subrutina se escribe una después de la otra).
+Ejemplo void main() que no regresa valor: 
 
-▲ MODIFICADORES DE TIPO DE DATO. (Se usan en funciones de E/S con printf("%  ",  );)
+#include <stdio.h>
+#include <conio.h>
 
-                                     i , d  →  ENTEROS
-                                       f    →  FLOTANTES
-                                       c    →  CARACTER O CHARACTER
-                                       lf   →  DOUBLE (long float)
-                                       s    →  CARACTERES EN CADENA "STRING" 
+void main()
+{
+  printf("Hola, Mundo"); //Impresión 
+  getch();
+}
+```
+<img src="./Image/Estructural/void main.jpg" >
 
-▲ FUNCIONES DE E/S EN LENGUAJE C.
+```c
+Ejemplo int main() que regresa valor entero:
+
+#include <stdio.h>
+
+int main()
+{
+  int A; //Declaración 
+  printf("\t Ingresa un numero: \n"); //Mensaje
+  // "\t" tabulador
+  // "\n" salto de línea
+  scanf("%i", &A); //Captura a la dirección de memoria A
+  printf("Usted ingresó: %d \n", A);
+  return 0;
+}
+```
+<img src="./Image/Estructural/int main.jpg" >
+
+<br>
+
+**SECCIÓN 4 - DEFINICIONES PARA LAS FUNCIONES DE USUARIO.**
+
+En esta sección se escribe cada una de las subrutinas diseñadas por el programador, 
+se especifican todas las instrucciones que incluye las sentencias de E/S, procesos, 
+estructuras de control e incluso otras subrutinas
+(si existe más de 1 subrutina se escribe una después de la otra).
+
+MODIFICADORES DE TIPO DE DATO. (Se usan en funciones de E/S con printf("%  ",  );)
+
+    i , d  →  ENTEROS
+    f      →  FLOTANTES
+    c      →  CARÁCTER O CHARACTER
+    lf     →  DOUBLE (long float)
+    s      →  CARACTERES EN CADENA "STRING" 
+
+FUNCIONES DE E/S EN LENGUAJE C.
   
   Esta función puede imprimir en pantalla las 
   
@@ -364,77 +373,85 @@ Unidades de medida de memoria.
   printf("El resultado es: %tipo_de_dato", NUEVO_SALARIO);
 ```
                                               
-                             % - localidad de memoria
-                             tipo_de_dato - modificador de tipo de dato
-                             NUEVO_SALARIO - nombre de variable de salida
+% - localidad de memoria
+tipo_de_dato - modificador de tipo de dato
+NUEVO_SALARIO - nombre de variable de salida
 
 
   -mensajes o anuncios del programador para comunicarse con el usuario.
                      
  ```c
- printf("Hola, soy ESIMIO");
+ printf("Hola, soy yo");
  ```
 
 ▲ FUNCIÓN DE ENTRADA ESTÁNDAR.
 
-  Esta función sirve para leer desde el teclado las variables de entrada. Si incluye más de 1 se escribirá una instrucción de entrada por cada variable.
+  Esta función sirve para leer desde el teclado las variables de entrada. 
+  Si incluye más de 1 se escribirá una instrucción de entrada por cada variable.
+
+
+**scantf(**  `"%modificador_de_tipo_de_dato"` *, &nombre_de_variable_de_entrada* **);**
 
 ```c
-scantf("%modificador_de_tipo_de_dato", &nombre_de_variable_de_entrada);
-
 scantf("%i", &A);
 scantf("%f", &AREA);
 ```
 
 
 ▲ SUBRUTINAS. 
-  
-    Es un programa más pequeño que contiene especificaciones de propósito específico, generalmente en un proceso, que forma parte de la solución de un problema. (Dividir un problema).
 
-    • Ventajas de las subrutinas:
-      
-      1. Resolver más rápido un problema.
-      2. Soluciones más entendibles y mejor estructuradas.
-      3. Mejor mantenimiento y corección de errores.
-      4. Implementación más eficiente.
+Es un programa más pequeño que contiene especificaciones de propósito específico,
+ generalmente en un proceso, que forma parte de la solución de un problema. (Dividir un problema).
 
-    *El nombre de una subrutina NUNCA debe ser igual al nombre de las variables definidas o declaradas en el programa.
+   ► Ventajas de las subrutinas:
+
+- 1. Resolver más rápido un problema.
+- 2. Soluciones más entendibles y mejor estructuradas.
+- 3. Mejor mantenimiento y corección de errores.
+- 4. Implementación más eficiente.
+* El nombre de una subrutina NUNCA debe ser igual al nombre de las variables definidas o declaradas en el programa.
 
     ► FUNCIONAMIENTO DE SUBRUTINAS:
+```text
+5. La subrutina debe escribirse en el programa principal, 
+    ya que este es el único que la puede ejecutar.
 
-      5. La subrutina debe escribirse en el programa principal, ya que este es el único que la puede ejecutar.
+6. La subrutina obtiene las variables de entrada para realizar 
+    el proceso mediante el programa principal y la salida o 
+    resultado se calcula dentro de su estructura.
 
-      6. La subrutina obtiene las variables de entrada para realizar el proceso mediante el programa principal y la salida o resultado se calcula dentro de su estructura.
+7. La subrutina tiene que DEVOLVER la variable de salida
+ obtenida al programa principal, para que este lo imprima,
+  manipula o realice cualquier otra acción con este dato.
 
-      7. La subrutina tiene que DEVOLVER la variable de salida obtenida al programa principal, para que este lo imprima, manipula o realice cualquier otra acción con este dato.
+8. Una subrutina sólo puede DEVOLVER UNA 1 VARIABLE DE SALIDA
+ al programa principal, si existen más de una, 
+ la subrutina tendrá que imprimirla dentro de su estructura.
+```
 
-      8. Una subrutina sólo puede DEVOLVER UNA 1 VARIABLE DE SALIDA al programa principal, si existen más de una, la subrutina tendrá que imprmirla dentro de su estructura.
+► FUNCIONES DE USUARIO.
 
+Las "funciones de usuario" representa las "SUBRUTINAS", una función de usuario sólo se puede ejecutar desde la función principal.
 
-▲ FUNCIONES DE USUARIO.
+► PARTES DE LAS FUNCIONES DE USUARIO:
     
-  Las "funciones de usuario" representa las "SUBRUTINAS", una función de usuario sólo se puede ejecutar desde la función principal.
+1. PROTOTIPO DE FUNCIÓN.
 
-  ► PARTES DE LAS FUNCIONES DE USUARIO:
-    
-    1. PROTOTIPO DE FUNCIÓN.
+Es la declaración de la función de usuario y se escribe en la sección - 2 del programa principa.
 
-       Es la declaración de la función de usuario y se escribe en la sección - 2 del programa principa.
+Clase_función Tipo_dato_variable_salida NOMBRE_FUNCIÓN(tipo_dato_variable_entrada1,...);
 
-        Clase_función Tipo_dato_variable_salida NOMBRE_FUNCIÓN(tipo_dato_variable_entrada1,...);
+clase_función → ámbito de llamada de función/visibilidad
+-visibilidad (*queda en blanco en el código)
+extern - visible/pública
+static - invisible/privada
 
-                            clase_función → ámbito de llamada de función/visibilidad
-                                            -visibilidad (*queda en blanco en el código)
-                                                         extern - visible/pública
-                                                         static - invisible/privada
+Tipo_dato_variable_salida NOMBRE_FUNCIÓN(tipo_dato_variable_entrada1,...);
+-Los dos partes constituyen los "ARGUMENTOS FORMALES"
+-Las variables de entradas son LOCALES y se escriben en minúscula
+void SUMA_COMPLEJO(int a, float b, double c);
 
-                            Tipo_dato_variable_salida NOMBRE_FUNCIÓN(tipo_dato_variable_entrada1,...);
-                                            -Los dos partes constituyen los "ARGUMENTOS FORMALES"
-                                            -Las variables de entradas son LOCALES y se escriben en minúscula
-
-                                            void SUMA_COMPLEJO(int a, float b, double c);
-
-    2. LLAMADA DE FUNCIÓN.
+    1. LLAMADA DE FUNCIÓN.
 
        Para ejecutar una función se LLAMA, se INVOCA o se REFERENCIA desde el programa principal main(), que es la sección - 3, utilizando su identificador o nombre y sus argumentos.
 
@@ -455,7 +472,7 @@ scantf("%f", &AREA);
                                SALUDO();
                                SUMA_COMPLEJO(A,B,C);
 
-    3. DEFINICIÓN DE LA FUNCIÓN.
+    2. DEFINICIÓN DE LA FUNCIÓN.
        
        Cuando se define la función se constituye de dos partes: cabecera de función y cuerpo de función, se escribe en la sección - 4 del programa.
 
