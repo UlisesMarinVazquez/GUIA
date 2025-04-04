@@ -1,4 +1,6 @@
-# PROGRAMACIÓN ESTRUCTURAL EN LENGUAJE C.
+ <a id="top"></a>
+ # PROGRAMACIÓN ESTRUCTURAL EN LENGUAJE C.
+
 
 <!-- Url de imagen -->
 
@@ -24,16 +26,14 @@
 </div>
  -->
 
- <a id="top"></a>
-# PROGRAMACIÓN ESTRUCTURAL EN LENGUAJE C
 
+
+# ÍNDICE
 <details>
 <summary>🔍 Índice Rápido</summary>
 
 [1. Conceptos Fundamentales de programación](#Conceptos)  
-[2. Operadores Aritméticos](#operadores)  
-[3. Funciones](#funciones)  
-[↑ Volver arriba](#top)
+
 </details>
 
 <a id="Conceptos"></a>
@@ -304,19 +304,23 @@ Unidades de medida de memoria.
 
         *instanciación: es el proceso de leer o especificar información, como los valores y el tipo de almacenamiento de un campo de datos
 
-    ► TIPOS DE DATOS.
+    ## 📊 Tabla de Tipos de Datos en C
 
-      • Tipo de caracter           - Char     - 1 byte
-        Las variables de tipo caracter se almacenan en sólo 1 byte de memoria, los valores que almacenan son todos los caracteres del abecedario, dígitos o símbolos especiales.
+| Tipo de Dato   | Palabra Clave | Tamaño (bytes) | Descripción                                                                 |
+|----------------|---------------|----------------|-----------------------------------------------------------------------------|
+| **Carácter**   | `char`        | 1              | Almacena caracteres del abecedario, dígitos y símbolos especiales.          |
+| **Entero**     | `int`         | 2              | Números enteros con signo (positivos y negativos).                          |
+| **Flotante**   | `float`       | 4              | Números reales con parte entera y decimal (positivos y negativos).          |
+| **Doble**      | `double`      | 8              | Números reales con mayor precisión que `float` (más capacidad de memoria).  |
 
-      • Tipo de dato entero        - int      - 2 bytes
-        Se utiliza para definir números enteros (valores) con signo, requiere de 2 bytes para su almacenamiento en memoria y puede representar a números positivos y negativos.
+## 📊 Tabla de Tipos de Datos en C
 
-      • Tipo de dato flotante      - float    - 4 bytes
-        Representa a todos los números reales que contienen una parte entera y una parte decimal, positivos como negativos.
-
-      • Tipo de dato doble         - double   - 8 bytes
-        Representa lo mismo que los flotante con la diferencia que ofrece una mayor cantidad de almacenamiento de memoria.
+| Tipo          | Keyword    | Tamaño | Descripción                                                                 |
+|---------------|------------|--------|-----------------------------------------------------------------------------|
+| 🔤 Carácter   | `char`     | 1 byte | Almacena `A-Z`, `0-9` y símbolos como `!@#`.                               |
+| 🔢 Entero     | `int`      | 2 bytes| Ej: `-32768` a `32767` (con signo).                                        |
+| ⚖️ Flotante  | `float`    | 4 bytes| Ej: `3.1416`, `-45.78` (6-7 dígitos decimales).                            |
+| 🎯 Doble     | `double`   | 8 bytes| Ej: `1.7976931348623157e+308` (15 dígitos decimales de precisión).         |
 
 ▲ SINTAXIS - DECLARACIÓN DE LAS VARIABLES C.
 
@@ -340,10 +344,14 @@ Unidades de medida de memoria.
        #include <libreria>
        #define NOMBRE_DE_CONSTANTE VALOR
 
-                                        #include <stdio.h>
-                                        #include <conio.h>
-                                        #include <math.h>
-                                        #define PI 3.1416
+```c                                 
+#include <stdio.h>
+#include <conio.h>
+#include <math.h>
+#define PI 3.1416
+```
+
+                                        
 
     • SECCIÓN 2 - DECLARACIONES GLOBALES.
        
@@ -370,7 +378,7 @@ Unidades de medida de memoria.
                                         printf(" %i", A);  imprime la variable de salida*/     
 
                                         getch();
-                                       }
+}
                                         
     • SECCIÓN 4 - DEFINICIONES PARA LAS FUNCIONES DE USUARIO.
 
@@ -390,7 +398,9 @@ Unidades de medida de memoria.
   
   -variables de E/S
 
-                     printf("El resultado es: %tipo_de_dato", NUEVO_SALARIO);
+ ```c
+  printf("El resultado es: %tipo_de_dato", NUEVO_SALARIO);
+```
                                               
                              % - localidad de memoria
                              tipo_de_dato - modificador de tipo de dato
@@ -399,16 +409,20 @@ Unidades de medida de memoria.
 
   -mensajes o anuncios del programador para comunicarse con el usuario.
                      
-                     printf("Hola, soy ESIMIO");
+ ```c
+ printf("Hola, soy ESIMIO");
+ ```
 
 ▲ FUNCIÓN DE ENTRADA ESTÁNDAR.
 
   Esta función sirve para leer desde el teclado las variables de entrada. Si incluye más de 1 se escribirá una instrucción de entrada por cada variable.
 
-   scantf("%modificador_de_tipo_de_dato", &nombre_de_variable_de_entrada);
+```c
+scantf("%modificador_de_tipo_de_dato", &nombre_de_variable_de_entrada);
 
-   scantf("%i", &A);
-   scantf("%f", &AREA);
+scantf("%i", &A);
+scantf("%f", &AREA);
+```
 
 
 ▲ SUBRUTINAS. 
@@ -426,13 +440,13 @@ Unidades de medida de memoria.
 
     ► FUNCIONAMIENTO DE SUBRUTINAS:
 
-      1. La subrutina debe escribirse en el programa principal, ya que este es el único que la puede ejecutar.
+      5. La subrutina debe escribirse en el programa principal, ya que este es el único que la puede ejecutar.
 
-      2. La subrutina obtiene las variables de entrada para realizar el proceso mediante el programa principal y la salida o resultado se calcula dentro de su estructura.
+      6. La subrutina obtiene las variables de entrada para realizar el proceso mediante el programa principal y la salida o resultado se calcula dentro de su estructura.
 
-      3. La subrutina tiene que DEVOLVER la variable de salida obtenida al programa principal, para que este lo imprima, manipula o realice cualquier otra acción con este dato.
+      7. La subrutina tiene que DEVOLVER la variable de salida obtenida al programa principal, para que este lo imprima, manipula o realice cualquier otra acción con este dato.
 
-      4. Una subrutina sólo puede DEVOLVER UNA 1 VARIABLE DE SALIDA al programa principal, si existen más de una, la subrutina tendrá que imprmirla dentro de su estructura.
+      8. Una subrutina sólo puede DEVOLVER UNA 1 VARIABLE DE SALIDA al programa principal, si existen más de una, la subrutina tendrá que imprmirla dentro de su estructura.
 
 
 ▲ FUNCIONES DE USUARIO.
