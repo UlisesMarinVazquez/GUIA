@@ -1,5 +1,5 @@
  <a id="top"></a>
- # PROGRAMACIÓN ESTRUCTURAL EN LENGUAJE C.
+ # **PROGRAMACIÓN ESTRUCTURAL EN LENGUAJE C.**
 
 
 <!-- Url de imagen -->
@@ -28,137 +28,124 @@
 
 
 
-# ÍNDICE
+# **ÍNDICE**
 <details>
 <summary>🔍 Índice Rápido</summary>
 
-[1. Conceptos Fundamentales de programación](#Conceptos)  
-
+- [1. Conceptos Fundamentales de programación](#conceptos-fundamentales-de-programación) 
+- [2. Lenguaje en C](#lenguaje-en-c)
+- [3. Tipos de Operadores en C](#tipos-de-operadores-en-c-estándar)
 </details>
 
-<a id="Conceptos"></a>
-## Conceptos Fundamentales de programación
+```text
 
-PROGRAMACIÓN.
+```
 
-    Es el proceso de escritura o codificación de un programa.
+## **Conceptos Fundamentales de programación**
 
-`PROGRAMACIÓN.` Es el proceso de escritura o codificación de un programa.
+`PROGRAMACIÓN:` 
 
-SOFTWARE:
-    
-    Es un conjunto de instrucciones de programa detalladas que controlan y coordinan los componentes del hardware de una computadora y controlan las operaciones de un sistema informático.
+```text
+Es el proceso de escritura o codificación de un programa.
+```
 
-SISTEMA OPERATIVO: 
-    
-    Es el software de sistema que controla, gestiona o administra los recursos de la computadora.
+`SOFTWARE:` 
+```text
+Es un conjunto de instrucciones de programa detalladas que controlan 
+y coordinan los componentes del hardware de una computadora,
+además controlan las operaciones de un sistema informático.
+```
 
-LENGUAJE DE PROGRAMACIÓN: 
 
-    Es un programa destinado a la construcción de otras programas informáticos, comprende un lenguaje formal que está diseñado para organizar algoritmos y procesos lógicos.
+`SISTEMA OPERATIVO:` Es el software de sistema que controla, gestiona o administra los recursos de la computadora.
 
-      ► COMPUESTOS: 
-                   1. Sintaxis
-                   2. Símbolos
-                   3. Reglas semánticas y sintácticas 
+`LENGUAJE DE PROGRAMACIÓN:` Es un programa destinado a la construcción de otras programas informáticos, comprende un lenguaje formal que está diseñado para organizar algoritmos y procesos lógicos.
 
-CÓDIGO FUENTE: 
+Compuesto de:  
+- 1. Sintaxis
+- 2. Símbolos
+- 3. Reglas semánticas y sintácticas 
 
-    Es un algoritmo escrito en un lenguaje de programación. (Pieza de software terminado).
 
-INTÉRPRETE: 
+`CÓDIGO FUENTE:` Es un algoritmo escrito en un lenguaje de programación. (Pieza de software terminado).
 
-    Es un traductor de "alto nivel" a un lenguaje de "bajo nivel".
+`ALGORITMO:` Es una secuencia Definida, Ordenada, Finita y Completa de instrucciones que nos llevan a resolver un problema.
+
+`FUNCIÓN O MÓDULO:` Sirve para implementar determinadas tareas de forma independiente lo que se define como "abstracción procedimental".
+
+### `INTÉRPRETE VS COMPILADOR`
+
+| **Característica**  | **Intérprete**                          | **Compilador**                         |
+|---------------------|-----------------------------------------|----------------------------------------|
+| Traducción          | Simultánea (línea por línea)            | Completa (todo el código)              |
+| Archivos generados  | No genera .obj ni .exe                  | Genera .obj y .exe                     |
+| Portabilidad        | Alta (ejecuta en múltiples plataformas) | Requiere recompilación por plataforma  |
+|
+
+`INTÉRPRETE:` Es un traductor de "alto nivel" a un lenguaje de "bajo nivel".
 
 Alto Nivel / lenguaje humano  → Bajo Nivel / Lenguaje máquina 
 
-      ► FASES: 
-               -Realiza de forma simultánea e inmediata la traducción y ejecución (ambas).
-               -Traduce cada instrucción y a continuación se ejecuta.
-
-               -Intérprete NO genera programas "objeto" (ya traducido) ni programas "ejecutables" (Conjunto de instrucciones para un fin específico), (los programas objeto da los programas ejecutables). 
+FASES: 
+- Realiza de forma simultánea e inmediata la traducción y ejecución (ambas).
+- Traduce cada instrucción y a continuación se ejecuta.
+- Intérprete NO genera programas "objeto" (ya traducido) ni programas "ejecutables" (Conjunto de instrucciones para un fin específico), (los programas objeto da los programas ejecutables). 
       
-      ► CARACTERÍSTICAS:
-                          -Portabilidad o transportabilidad
-                          -Lista para trabajar en otra plataforma
+CARACTERÍSTICAS:
+- Portabilidad o transportabilidad
+- Lista para trabajar en otra plataforma
               
               
-COMPILADOR: 
+`COMPILADOR:`
 
 Los compiladores requieren forzosamente un Intérprete.
 
-             -Son traductores empleados para lenguajes de ALTO NIVEL, en los cuales cada instrucción escrita corresponde a varias instrucciones en lenguaje MÁQUINA.
-
-             -Programa escrito en el compilador → Programa fuente (código fuente)
-
-             -Compilador → genera programa traducido (prog. objeto) → programa ejecutable
+- Son traductores empleados para lenguajes de ALTO NIVEL, en los cuales cada instrucción escrita corresponde a varias instrucciones en lenguaje MÁQUINA.
+- Programa escrito en el compilador → Programa fuente (código fuente)
+- Compilador → genera programa traducido (prog. objeto) → programa ejecutable
 
 ## Cronología de Lenguajes de Programación
+ <a id="Cronologia"></a>
 
-| Periodo      | Generación/Lenguaje           | Detalle                          |
-|--------------|-------------------------------|----------------------------------|
-| **1940**     | `1ª Generación`                 | Lenguaje máquina                 |
-|              | `2ª Generación`                 | Lenguajes ensambladores          |
-| **1950-1970**| `3ª Generación`                 | Lenguajes de alto nivel:         |
-| **1950**         |  `FORTRAN` | Primer lenguaje científico |
-| **1958**         | `COBOL` | Para negocios |
-| **1964**       |  `BASIC` | Educativo |
-| **1972**       |  `C` | Base para sistemas |
-| **1983**         |  `C++` | Orientado a objetos |
+| Periodo            | Generación/Lenguaje   | Detalle                          |
+|--------------------|-----------------------|----------------------------------|
+| **1940**           | `1ª Generación`       | Lenguaje máquina                 |
+|                    | `2ª Generación`       | Lenguajes ensambladores          |
+| **1950-1970**      | `3ª Generación`       | Lenguajes de alto nivel:         |
+| **1950**           |  `FORTRAN`            | Primer lenguaje científico       |
+| **1958**           | `COBOL`               | Para negocios                    |
+| **1964**           |  `BASIC`              | Educativo                        |
+| **1972**           |  `C`                  | Base para sistemas               |
+| **1983**           |  `C++`                | Orientado a objetos              |
+|
 
-▲ AMBIENTE INTEGRAL EN C:
-
-    1. Estructuras de control SECUENCIALES 
-    2. Estructuras de control ALTERNATIVAS
-    3. Estructuras de control REPETITIVAS
-
-• FUNCIÓN O MÓDULO: 
-    
-    Sirve para implementar determinadas tareas de forma independiente lo que se define como "abstracción procedimental".
+# **LENGUAJE EN C.**
+ <a id="LenguajeEnC"></a>
 
 
-• ALGORITMO:
-    
-    Es una secuencia Definida, Ordenada, Finita y Completa de instrucciones que nos llevan a resolver un problema.
+`AMBIENTE INTEGRAL EN C:`
+1. Estructuras de control SECUENCIALES 
+2. Estructuras de control ALTERNATIVAS
+3. Estructuras de control REPETITIVAS
 
+## TIPOS DE OPERADORES EN C ESTÁNDAR.
 
-▲ TIPOS DE OPERADORES EN LA PROGRAMACIÓN.
+### ► OPERADORES ARITMÉTICOS
 
+| Operación       | Símbolo(s) | Sintaxis de ejemplo          |
+|-----------------|------------|------------------------------|
+| Suma            | `+`        | `R = A + B`                  |
+| Resta           | `-`        | `R = A - B`                  |
+| Multiplicación  | `*`        | `R = A * B`                  |
+| División        | `/`        | `R = A / B`                  |
+| Módulo          | `%`        | `R = A % B` , `R = A mod B`  |
+|
 
-
-Sintaxis y usos. Operaciones permitidas.
-
-| Operación        | Símbolo(s)      | Sintaxis de ejemplo        | Notas adicionales          |
-|------------------|----------------|---------------------------|---------------------------|
-| **Suma**         | `+`            | `R = A + B`               | Operación básica          |
-| **Resta**        | `-`            | `R = A - B`               | Operación básica          |
-| **Multiplicación**| `×`, `*`       | `R = A × B`, `R = A * B`  | `*` es más común en código|
-| **División**     | `/`            | `R = A / B`               | División estándar         |
-| **Módulo**       | `mod`, `%`     | `R = A mod B`, `R = A % B`| Resto de división<br>A: dividendo, B: divisor |
-
-► OPERADORES RELACIONALES.
+### ► OPERADORES RELACIONALES.
 
  Sirven para realizar comparaciones entre distintos valores con el objetivo de tomar decisiones.
-Se establece una relación entre los datos y pueden tener como resultados dos valores: verdadero (1) o falso (0)
+<br>Se establece una relación entre los datos y pueden tener como resultados dos valores: <br> *verdadero (1)  o falso (0)*
 
-                                ==                      A==B
-                                 Y          And                     (A<B)&&(A<C)
-                                 O          Or                      (A<B)||(A<C)
-                                 No         Not                     !(A<B) , A!=B 
-
-                                 ---
-
-## OPERADORES EN C
-### ► OPERADORES ARITMÉTICOS
-| Operación       | Símbolo(s) | Ejemplo      |
-|-----------------|------------|--------------|
-| Suma            | `+`        | `R = A + B`  |
-| Resta           | `-`        | `R = A - B`  |
-| Multiplicación  | `*`        | `R = A * B`  |
-| División        | `/`        | `R = A / B`  |
-| Módulo          | `%`        | `R = A % B`  |
-
-### ► OPERADORES RELACIONALES
 | Símbolo | Descripción          | Ejemplo   |
 |---------|----------------------|-----------|
 | `>`     | Mayor que            | `A > B`   |
@@ -167,80 +154,55 @@ Se establece una relación entre los datos y pueden tener como resultados dos va
 | `<=`    | Menor o igual que    | `A <= B`  |
 | `==`    | Igual que            | `A == B`  |
 | `!=`    | Diferente que        | `A != B`  |
+|
 
-### ► OPERADORES LÓGICOS
-| Símbolo | Descripción | Ejemplo           |
-|---------|-------------|-------------------|
-| `&&`    | AND         | `(A < B) && (A < C)` |
-| `||`    | OR          | `(A < B) || (A < C)` |
-| `!`     | NOT         | `!(A < B)`        |
+### ► OPERADORES LÓGICOS.
 
+| Símbolo   | Descripción     | Ejemplo           
+|-----------|-----------------|-------------------
+
+    &&       AND          (A < B) && (A < C)
+    ||       OR           (A < B) || (A < C) 
+    !        NOT          !(A < B)        
 ---
 
+### ► OPERADORES DE INCREMENTO ++ / DECREMENTO --.
 
-    ► OPERADORES LÓGICOS.
-
-    OPERADORES DE INCREMENTO ++ / DECREMENTO --.
-
-++ INCREMENTO
-   
-   x=6;
-   y=x++;
-
-   x=6
-   y=6
-   x=7
-
-   ------
-   x=6;
-   y=++x;
-
-   x=6
-   y=7
-   x=7
-
--- DECREMENTO
-   
-   x=6;
-   y=x--;
-
-   x=6;
-   y=6;
-   x=5;
-
-   -------
-   x=6;
-   y=--x;
-
-   x=6
-   y=5
-   x=5
+| Operador                       | Valores Iniciales  | Proceso                                        | Resultado      |
+|--------------------------------|--------------------|------------------------------------------------|----------------|
+| *Post-incremento*<br>`x++`     | `x=6`<br> `y=x++`  | 1. Asigna `x` a `y`<br>2. Incrementa `x`       | `x=7`<br>`y=6` |
+| *Pre-incremento*<br>`++x`      | `x=6`<br> `y=++x`  | 1. Incrementa `x`<br>2. Asigna nuevo `x` a `y` | `x=7`<br>`y=7` |
+| *Post-decremento*<br>`x--`     | `x=6`<br> `y=x--`  | 1. Asigna `x` a `y`<br>2. Decrementa `x`       | `x=5`<br>`y=6` |
+| *Pre-decremento*<br>`--x`      | `x=6`<br> `y=--x`  | 1. Decrementa `x`<br>2. Asigna nuevo `x` a `y` | `x=5`<br>`y=5` |
+|
 
 
-    ► OPERADORES DE ASIGNACIÓN. = , →
+### ► OPERADORES DE ASIGNACIÓN. = , →
 
-    BLOQUE DE ASIGNACIÓN.
-    
-    La ASIGNACIÓN es una operación destructiva. Ejemplo
+Bloque de asignación:
+<br>La ASIGNACIÓN "=" es una operación destructiva. <br>Ejemplos:
 
-    int a1, a2;
-    a1=10;
-    a2=a1+5;            
-    a2=0;
+```c
+int a1, a2;
+a1 = 10;
+a2 = a1+5;            
+a2 = 0;
+```
+Resultados: `a1 es 10 y a2 es 0`
 
-    a1 es 10 y a2 es 0
+**📝 Operadores de Asignación Compuesta en C**
+
+| Operador | Ejemplo | Equivalencia | Descripción         | Cambio en `a` (si a=10 inicial)   |
+|----------|---------|--------------|---------------------|-----------------------------------|
+| `+=`     | `a += 2`| `a = a + 2`  | Suma y asigna       |10 → 12                            |
+| `-=`     | `a -= 3`| `a = a - 3`  | Resta y asigna      |10 → 7                             |
+| `*=`     | `a *= 4`| `a = a * 4`  | Multiplica y asigna |10 → 40                            |
+| `/=`     | `a /= 2`| `a = a / 2`  | Divide y asigna     |10 → 5                             |
+| `%=`     | `a %= 3`| `a = a % 3`  | Módulo y asigna     |10 → 1                             |
+|
 
 
-
-                             a+=5    a=a+5
-                             a-=5    a=a-5
-                             a*=5    a=a*5
-                             a/=5    a=a/5
-                             a%=5    a=a%5
-
-
-
-    Prioridades de los operadores:
+Prioridades de los operadores:
 
     1. ()
     2. !, ++, -- negación, incremente, decremento
