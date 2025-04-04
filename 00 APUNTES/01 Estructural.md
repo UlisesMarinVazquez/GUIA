@@ -51,9 +51,12 @@ Es el proceso de escritura o codificación de un programa.
 
 `SOFTWARE:` 
 ```text
-Es un conjunto de instrucciones de programa detalladas que controlan 
-y coordinan los componentes del hardware de una computadora,
-además controlan las operaciones de un sistema informático.
+Es un conjunto de instrucciones de 
+programa detalladas que controlan 
+y coordinan los componentes del 
+hardware de una computadora,
+además controlan las operaciones 
+de un sistema informático.
 ```
 
 
