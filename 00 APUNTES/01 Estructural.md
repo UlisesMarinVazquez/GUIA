@@ -43,10 +43,7 @@ PROGRAMACIÓN.
 
     Es el proceso de escritura o codificación de un programa.
 
-PROGRAMA: 
-    
-    Es el conjunto de sentencias o instrucciones que se le da a la computadora.
-
+`PROGRAMACIÓN.` Es el proceso de escritura o codificación de un programa.
 
 SOFTWARE:
     
