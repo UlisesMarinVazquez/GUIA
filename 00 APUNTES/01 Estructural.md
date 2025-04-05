@@ -1,40 +1,98 @@
- <a id="top"></a>
- # **PROGRAMACIÓN ESTRUCTURAL EN LENGUAJE C.**
+<!-- TIPS de archivos MD -->
+
+<!-- 
+
+TEXTO
+
+# Título 1 (h1)
+## Título 2 (h2)
+### Título 3 (h3)
+#### Título 4 (h4)
+<br> Salto de línea en texto
+dos tab y convierte en sangría
+`hola` sobresalta el texto
+**negritas** 
+*cursiva* 
+- lista
+~~Tachado~~ 
 
 
-<!-- Url de imagen -->
+BLOQUE DE CÓDIGO
 
-<!-- <img width="288" alt="image" src=""> --> 
+```lenguaje de programación
+    (texto)
+```
 
-<!-- Tamaño por default -->
+```c
+    printf("Hola, Mundo");
+``` 
 
-<!-- ![Texto alternativo](./Image/Estructural/01%20imagen%20c.jpg) -->      
 
-<!-- TAMAÑO PERSONALIZADO -->
+CITA
 
-<!-- <img src="./Image/Estructural/01 imagen c.jpg" width="200"> -->        
+> Esto es una cita.  
+---  
+*** 
 
-<!-- CENTRADO HORIZONTAL -->
 
-<img src="./Image/Estructural/01 imagen c.jpg" alt="Logo" width="200" style="display: block; margin: auto;"> 
+ETIQUETA
 
-<!-- CENTRADO CON TEXTO DEBAJO -->
+ <a id="etiqueta"></a>  etiqueta
+ [↑ Volver al inicio](#etiqueta)
 
-<!-- <div style="text-align: center;">
-  <img src="./Image/Estructural/01 imagen c.jpg" alt="Logo" width="200">
-  <p>Texto centrado debajo de la imagen</p>
+
+IMÁGENES
+
+<img width="288" alt="image" src="link">  Url de imagen 
+
+![Texto alternativo](./ruta)   Tamaño por default  
+
+ <img src="./ruta" width="200">  Tamaño personalizado       
+
+<img src="./ruta" alt="Logo" width="200" style="display: block; margin: auto;"> Centrado Horizontal
+
+Centrado con texto debajo
+ <div style="text-align: center;">
+  <img src="./ruta" alt="Logo" width="200">
+  <p>Texto debajo</p>
 </div>
+
+ÍNDICE
+
+<details>
+<summary>🔍 Índice Rápido</summary>
+
+- [1. Nombre del Título](#Título) 
+- [2. """"](#"""")
+</details>
+
  -->
 
-
+ <a id="top"></a>
+ # **PROGRAMACIÓN ESTRUCTURAL EN LENGUAJE C.**
 
 # **ÍNDICE**
 <details>
 <summary>🔍 Índice Rápido</summary>
 
-- [1. Conceptos Fundamentales de programación](#conceptos-fundamentales-de-programación) 
+- [1. Conceptos Fundamentales de Programación](#conceptos-fundamentales-de-programación) 
 - [2. Lenguaje en C](#lenguaje-en-c)
 - [3. Tipos de Operadores en C](#tipos-de-operadores-en-c-estándar)
+- [4. Estructura General de un Programa]
+- [5. Funciones]
+- [6. Subrutinas]
+- [7. Paso de Argumentos]
+- [8. Estructuras de Decisión]
+- [9. Estructura de Selección]
+- [10. Estructura de Iteración ]
+- [11. Estructura de Iteración Precondicional]
+- [12. Estructura de Iteración Poscondicional]
+- [13. FOR]
+- [14. Estructuras de Datos Estáticos]
+- [15. Arreglo Unidimensional]
+- [16. Arreglo Bidimensional]
+- [17. Arreglos Paralelos]
+- [18. Apuntadores]
 </details>
 
 
@@ -67,7 +125,7 @@ Compuesto de:
 | Traducción          | Simultánea (línea por línea)            | Completa (todo el código)              |
 | Archivos generados  | No genera .obj ni .exe                  | Genera .obj y .exe                     |
 | Portabilidad        | Alta (ejecuta en múltiples plataformas) | Requiere recompilación por plataforma  |
-|
+
 
 `INTÉRPRETE:` Es un traductor de "alto nivel" a un lenguaje de "bajo nivel".
 
@@ -106,7 +164,7 @@ Los compiladores requieren forzosamente un Intérprete.
 | **1964**           |  `BASIC`              | Educativo                        |
 | **1972**           |  `C`                  | Base para sistemas               |
 | **1983**           |  `C++`                | Orientado a objetos              |
-|
+
 
 # **LENGUAJE EN C.**
  <a id="LenguajeEnC"></a>
@@ -128,7 +186,7 @@ Los compiladores requieren forzosamente un Intérprete.
 | Multiplicación  | `*`        | `R = A * B`                  |
 | División        | `/`        | `R = A / B`                  |
 | Módulo          | `%`        | `R = A % B` , `R = A mod B`  |
-|
+
 
 ### ► OR - OPERADORES RELACIONALES.
 
@@ -143,7 +201,7 @@ Los compiladores requieren forzosamente un Intérprete.
 | `<=`    | Menor o igual que    | `A <= B`  |
 | `==`    | Igual que            | `A == B`  |
 | `!=`    | Diferente que        | `A != B`  |
-|
+
 
 ### ► OL - OPERADORES LÓGICOS.
 
@@ -163,7 +221,7 @@ Los compiladores requieren forzosamente un Intérprete.
 | *Pre-incremento*<br>`++x`      | `x=6`<br> `y=++x`  | 1. Incrementa `x`<br>2. Asigna nuevo `x` a `y` | `x=7`<br>`y=7` |
 | *Post-decremento*<br>`x--`     | `x=6`<br> `y=x--`  | 1. Asigna `x` a `y`<br>2. Decrementa `x`       | `x=5`<br>`y=6` |
 | *Pre-decremento*<br>`--x`      | `x=6`<br> `y=--x`  | 1. Decrementa `x`<br>2. Asigna nuevo `x` a `y` | `x=5`<br>`y=5` |
-|
+
 
 
 ### ► OPERADORES DE ASIGNACIÓN. = , →
@@ -188,7 +246,7 @@ Resultados: `a1 es 10 y a2 es 0`
 | `*=`     | `a *= 4`| `a = a * 4`  | Multiplica y asigna |10 → 40                            |
 | `/=`     | `a /= 2`| `a = a / 2`  | Divide y asigna     |10 → 5                             |
 | `%=`     | `a %= 3`| `a = a % 3`  | Módulo y asigna     |10 → 1                             |
-|
+
 
 ### ` Prioridades de los operadores. `
 
@@ -222,7 +280,7 @@ Resultados: `a1 es 10 y a2 es 0`
 | **Nibble**       | 4 bits         | ½ byte                | Conocido como "cuarteto"                     |`1101` (un dígito hexadecimal)  |
 | **Byte**         | 8 bits         | 1 byte = 2 nibbles    | Unidad fundamental de información            |`01000001` (letra 'A' en ASCII) |
 | **Palabra**      | 16/32/64b      | Múltiples bytes       | Depende de la arquitectura del sistema       |Tamaño de registro del CPU      |
-|
+
 
 🖥️ Unidades de Medida de Memoria
 
@@ -232,7 +290,7 @@ Resultados: `a1 es 10 y a2 es 0`
 | **Byte**                | 8 bits         | Unidad básica direccionable                       |Almacena 1 carácter ASCII  |
 | **Dirección de memoria**| -              | Número asociado a cada byte                       |Hexadecimal (ej: `0x1000`) |
 | **Contenido**           | Variable       | Información almacenada en una posición            |                           | 
-|
+
 
 
  ### ► TIPOS DE DATOS Y OPERADORES EN LENGUAJE C.
@@ -286,7 +344,7 @@ double VELOCIDAD, PI_FACTORIAL, LOGARITMO;
 El preprocesador son las instrucciones que se le va a dar al compilador a lenguajes de bajo nivel.
 <br>Son los archivos "include" que contiene las librerías o bibliotecas de funciones, en esta sección se pueden definir las constantes.
 
-**#include** `<libreria>` <br>
+**#include** `<librería>` <br>
 **#define** *NOMBRE_DE_CONSTANTE VALOR*
 
 ```c                               
@@ -363,32 +421,30 @@ MODIFICADORES DE TIPO DE DATO. (Se usan en funciones de E/S con printf("%  ",  )
     lf     →  DOUBLE (long float)
     s      →  CARACTERES EN CADENA "STRING" 
 
-FUNCIONES DE E/S EN LENGUAJE C.
+### **FUNCIONES DE USUARIO.**
+
+**FUNCIONES DE E/S EN LENGUAJE C.**
   
-  Esta función puede imprimir en pantalla las 
-  
-  -variables de E/S
+- Esta función puede imprimir en pantalla las variables de E/S:
 
  ```c
   printf("El resultado es: %tipo_de_dato", NUEVO_SALARIO);
 ```
-                                              
-% - localidad de memoria
-tipo_de_dato - modificador de tipo de dato
-NUEVO_SALARIO - nombre de variable de salida
-
-
-  -mensajes o anuncios del programador para comunicarse con el usuario.
+```text                                            
+%             → localidad de memoria
+tipo_de_dato  → modificador de tipo de dato
+NUEVO_SALARIO → nombre de variable de salida
+```
+- Mensajes o anuncios del programador para comunicarse con el usuario:
                      
  ```c
  printf("Hola, soy yo");
  ```
 
-▲ FUNCIÓN DE ENTRADA ESTÁNDAR.
+**FUNCIÓN DE ENTRADA ESTÁNDAR.**
 
-  Esta función sirve para leer desde el teclado las variables de entrada. 
-  Si incluye más de 1 se escribirá una instrucción de entrada por cada variable.
-
+Esta función sirve para leer desde el teclado las variables de entrada.
+Si incluye más de 1 se escribirá una instrucción de entrada por cada variable.
 
 **scantf(**  `"%modificador_de_tipo_de_dato"` *, &nombre_de_variable_de_entrada* **);**
 
@@ -398,551 +454,548 @@ scantf("%f", &AREA);
 ```
 
 
-▲ SUBRUTINAS. 
+**SUBRUTINAS.** 
 
 Es un programa más pequeño que contiene especificaciones de propósito específico,
- generalmente en un proceso, que forma parte de la solución de un problema. (Dividir un problema).
+generalmente en un proceso, que forma parte de la solución de un problema. (Dividir un problema).
 
    ► Ventajas de las subrutinas:
 
 - 1. Resolver más rápido un problema.
 - 2. Soluciones más entendibles y mejor estructuradas.
-- 3. Mejor mantenimiento y corección de errores.
+- 3. Mejor mantenimiento y corrección de errores.
 - 4. Implementación más eficiente.
 * El nombre de una subrutina NUNCA debe ser igual al nombre de las variables definidas o declaradas en el programa.
 
-    ► FUNCIONAMIENTO DE SUBRUTINAS:
-```text
-5. La subrutina debe escribirse en el programa principal, 
+**► FUNCIONAMIENTO DE SUBRUTINAS:**
+
+1. La subrutina debe escribirse en el programa principal, 
     ya que este es el único que la puede ejecutar.
 
-6. La subrutina obtiene las variables de entrada para realizar 
+2. La subrutina obtiene las variables de entrada para realizar 
     el proceso mediante el programa principal y la salida o 
     resultado se calcula dentro de su estructura.
 
-7. La subrutina tiene que DEVOLVER la variable de salida
+3. La subrutina tiene que DEVOLVER la variable de salida
  obtenida al programa principal, para que este lo imprima,
   manipula o realice cualquier otra acción con este dato.
 
-8. Una subrutina sólo puede DEVOLVER UNA 1 VARIABLE DE SALIDA
+4. Una subrutina sólo puede DEVOLVER UNA 1 VARIABLE DE SALIDA
  al programa principal, si existen más de una, 
  la subrutina tendrá que imprimirla dentro de su estructura.
-```
 
-► FUNCIONES DE USUARIO.
+
+**► FUNCIONES DE USUARIO.**
 
 Las "funciones de usuario" representa las "SUBRUTINAS", una función de usuario sólo se puede ejecutar desde la función principal.
 
-► PARTES DE LAS FUNCIONES DE USUARIO:
+**► PARTES DE LAS FUNCIONES DE USUARIO:**
     
-1. PROTOTIPO DE FUNCIÓN.
+**1. PROTOTIPO DE FUNCIÓN.**
 
-Es la declaración de la función de usuario y se escribe en la sección - 2 del programa principa.
+Es la declaración de la función de usuario y se escribe en la sección - 2 del programa principal.
 
-Clase_función Tipo_dato_variable_salida NOMBRE_FUNCIÓN(tipo_dato_variable_entrada1,...);
+**Clase_función** `Tipo_dato_variable_salida` **NOMBRE_FUNCIÓN** *(tipo_dato_variable_entrada1,...);*
 
-clase_función → ámbito de llamada de función/visibilidad
--visibilidad (*queda en blanco en el código)
-extern - visible/pública
-static - invisible/privada
+```text
+clase_función   → ámbito de llamada de función/visibilidad
 
-Tipo_dato_variable_salida NOMBRE_FUNCIÓN(tipo_dato_variable_entrada1,...);
+-visibilidad    (*queda en blanco en el código)
+
+extern          → visible/pública
+static          → invisible/privada
+```
+
+`Tipo_dato_variable_salida` **NOMBRE_FUNCIÓN** *(tipo_dato_variable_entrada1,...);* 
+```text
 -Los dos partes constituyen los "ARGUMENTOS FORMALES"
 -Las variables de entradas son LOCALES y se escriben en minúscula
 void SUMA_COMPLEJO(int a, float b, double c);
+```
 
-    1. LLAMADA DE FUNCIÓN.
+**2. LLAMADA DE FUNCIÓN.**
 
-       Para ejecutar una función se LLAMA, se INVOCA o se REFERENCIA desde el programa principal main(), que es la sección - 3, utilizando su identificador o nombre y sus argumentos.
+Para ejecutar una función se LLAMA, se INVOCA o se REFERENCIA desde el programa principal main(), que es la sección - 3, utilizando su identificador o nombre y sus argumentos.
 
-       La llamada "afunción" utiliza las variables de E/S que define el programa principal, las cuales se conocen como "ARGUMENTOS ACTUALES O REALES" y se escriben en mayúsculas.
+La llamada "afunción" utiliza las variables de E/S que define el programa principal, las cuales se conocen como "ARGUMENTOS ACTUALES O REALES" y se escriben en mayúsculas.
        
-       • Existen dos formas de LLAMAR a las funciones:
+• Existen dos formas de LLAMAR a las funciones:
          
-         a) Cuando la función devuelve la variable de salida. (forzosamente 1 variable de S).
+- a) Cuando la función devuelve la variable de salida. (forzosamente 1 variable de S).
             
-                                NOMBRE_VARIABLE_SALIDA=NOMBRE_FUNCIÓN(NOMBRE_VARIABLE_ENTRADA1,...);
+**NOMBRE_VARIABLE_SALIDA** = **NOMBRE_FUNCIÓN** *(NOMBRE_VARIABLE_ENTRADA1,...);*
+```c
+P = PROMEDIO (C1, C2, C3);
+```
 
-                                P=PROMEDIO(C1,C2,C3);
-
-         b) Cuando la función NO devuelve variable de salida. (Si la variable de salida fuera un mensaje no devuelve la variable de S o si fuese más de 1 variable de S no se puede devolver al programa principal).
+- b) Cuando la función NO devuelve variable de salida. (Si la variable de salida fuera un mensaje no devuelve la variable de S o si fuese más de 1 variable de S no se puede devolver al programa principal).
             
-                               NOMBRE_FUNCIÓN(NOMBRE_VARIABLE_ENTRADA1,...);
+**NOMBRE_FUNCIÓN** *(NOMBRE_VARIABLE_ENTRADA1,...);*
+```c
+SALUDO ();
+SUMA_COMPLEJO (A, B, C);
+```
 
-                               SALUDO();
-                               SUMA_COMPLEJO(A,B,C);
-
-    2. DEFINICIÓN DE LA FUNCIÓN.
+**2. DEFINICIÓN DE LA FUNCIÓN.**
        
-       Cuando se define la función se constituye de dos partes: cabecera de función y cuerpo de función, se escribe en la sección - 4 del programa.
+Cuando se define la función se constituye de dos partes: cabecera de función y cuerpo de función, se escribe en la sección - 4 del programa.
 
-       • Cabecera de función.
-         Es similar al prototipo de función sólo que se agregan los nombres de las variables de entrada con minúsculas y al final no lleva ";".
+- Cabecera de función.
+Es similar al prototipo de función sólo que se agregan los nombres de las variables de entrada con minúsculas y al final no lleva ";".
 
-                          tipo_dato_variable_salida NOMBRE_FUNCIÓN (tipo_entrada_entrada1,...)
+`tipo_dato_variable_salida` **NOMBRE_FUNCIÓN** *(tipo_entrada_entrada1,...)*
 
-                          int CUBO(int a, int b, int c)
+```c
+int CUBO (int a, int b, int c)
+```
 
-       • Cuerpo de función.
-         Contiene las declaraciones LOCALES de la función, que es/son las variables de S, si existen otras variables auxiliares se declaran en esta misma sección, además contiene el proceso que es la operación aritmética. Finalmente, la instrucción "return" que devuelve la variable de S.
-                          
-                          {
-                            int cub;
-                            cub=a*b*c;
-                            return cub;
-                          }
+- Cuerpo de función.
+Contiene las declaraciones LOCALES de la función, que es/son las variables de S, si existen otras variables auxiliares se declaran en esta misma sección, además contiene el proceso que es la operación aritmética. Finalmente, la instrucción "return" que devuelve la variable de S.
 
+```c                         
+{
+  int cub;
+  cub=a*b*c;
+  return cub;
+}
+```
+        
+**▲ PASO DE ARGUMENTOS DE ENTRADA A LAS FUNCIONES DE USUARIO.**
     
+**1. PASO POR VALOR.**
 
+Sucede cuando se escribe únicamente el nombre de la variable de entrada o su tipo de dato en el prototipo o cabecera de función, en este caso el compilador crea copias de las variables originales (variables actuales) y las almacena en memoria, de esta manera existe una protección de datos.
 
-         
-▲ PASO DE ARGUMENTOS DE ENTRADA A LAS FUNCIONES DE USUARIO.
-    
-    1. PASO POR VALOR.
-       Sucede cuando se escribe únicamente el nomnbre de la variable de Eentrada o su tipo de dato en el prototipo o cabecera de función, en este caso el compilador crea copias de las variables originales (variables actuales) y las almacena en memoria, de esta manera existe una protección de datos.
+```c
+-Prototipo  int SUMA(int, int);
 
-        -Prototipo  int SUMA(int, int);
+-Cabecera   int SUMA(int a, int b)
+```
 
-        -Cabecera   int SUMA(int a, int b)
+**2. PASO POR REFERENCIA. (Ubicación de memoria).**
+   
+El paso por referencia sólo se permite en C++ y consiste en declarar en la lista de los argumentos formales un "alias" para las variables de E, de manera que variables actuales y las variables formales se referencien con la misma dirección de memoria, el compilador ahora identifica a la variable por una dirección donde se encuentra almacenada.
 
-    2. PASO POR REFERENCIA. (Ubicación de memoria).
-       El paso por referencia sólo se permite en C++ y consiste en declarar en la lista de los argumentos formales un "alias" para las variables de E, de manera que variables actuales y las variables formales se referencien con la misma dirección de memoria, el compilador ahora identifica a la variable por una dirección donde se encuentra almacenada.
+Para declarar el "alias" se utiliza el operador & "ampersand" aunado a los argumentos formales.
 
-       Para declarar el "alias" se utiliza el operador & "ampersand" aunado a los argumentos formales.
+```c
+-Prototipo  int SUMA(int &, int &);
 
-        -Prototipo  int SUMA(int &, int &);
+-Cabecera   int SUMA(int &a, int &b)
+```
 
-        -Cabecera   int SUMA(int &a, int &b)
-
-Recursividad.
+**RECURSIVIDAD.**
       
-      La recursividad es un concepto en programación en el que una función se llama a sí misma dentro de su propio cuerpo. Es una técnica muy útil para resolver problemas que requieren la repetición de un proceso hasta que se cumpla una condición de parada.
+La recursividad es un concepto en programación en el que una función se llama a sí misma dentro de su propio cuerpo. Es una técnica muy útil para resolver problemas que requieren la repetición de un proceso hasta que se cumpla una condición de parada.
 
   
-▲ ESTRUCTURAS DE DECISIÓN.
+**▲ ESTRUCTURAS DE DECISIÓN.**
 
-     ► CARACTERÍSTICAS.
+**► CARACTERÍSTICAS.**
 
-       -Se utilizan cuando en el desarrollo de la solución de un problema se debe tomar una decisión, lo que resulta en una "bifurcación" en el flujo de ejecución del programa.
+- Se utilizan cuando en el desarrollo de la solución de un problema se debe tomar una decisión, lo que resulta en una "bifurcación" en el flujo de ejecución del programa.
+- La "bifurcación" marca más de un camino a seguir en el flujo de la ejecución del programa.
+- La decisión se expresa con una condición que define una operación relacional, en la cual intervienen los operadores relacionales.
+- La decisión puede contener y evaluar una o más condiciones.  
 
-       -La "bifurcación" marca más de un camino a seguir en el flujo de la ejecución del programa.
-
-       -La decisión se expresa con una condición que define una operación relacional, en la cual intervienen los operadores relacionales.
-
-       -La decisión puede contener y evaluar una o más condiciones.  
-
-     ► TIPOS DE ESTRUCTURAS DE DECISIÓN.
+**► TIPOS DE ESTRUCTURAS DE DECISIÓN.**
 
 
-       • SIMPLE - si...entonces (if)
+**• SIMPLE - si...entonces (if)**
 
-                -Sólo tiene una línea de ejecución, en la cual definen las operaciones o instrucciones que tienen que realizar.
+- Sólo tiene una línea de ejecución, en la cual definen las operaciones o instrucciones que tienen que realizar.
+- Permite que el flujo de ejecución siga por un camino específico siempre que se cumpla una condición o bien varias condiciones.
 
-                -Permite que el flujo de ejecución siga por un camino específico siempre que se cumpla una condición o bien varias condiciones.
+```c
+if(condición con operadores relacionales)
+  {
+    //sentencia 1
+    //sentencia 2
+    //sentencia etc
+  }
+```
+```c
+if(x>=0)
+  {
+    printf("%d es un numero postivo", x);
+  }
+```
 
-                                if(condición con operadores relacionales)
-                                {
-                                  sentencia 1;
-                                  sentencia 2;
-                                  sentencia etc;
-                                }
+**• DOBLE - si...sino (if...else)**
 
-
-                                if(x>=0)
-                                {
-                                  printf("%d es un numero postivo", x);
-                                }
-
-
-
-
-       • DOBLE - si...sino (if...else)
-
-                -Indica dos líneas de ejecución, en las cuales se definen cada una de las operaciones o instrucciones para realizar dependiendo de la evaluación de la condición.
-
-                -Permite que el flujo de ejecución pueda seguir por cualquiera de los DOS caminos especificados (verdadero o falso). 
-                
-                -En este caso el problema sugiere que si la condición no se cumple, es decir, se obtiene un falso en la evaluación de la condición, el programa puede realizar otras operaciones.
-                                
-                                if(condición con operadores relacionales)
-                                {
-                                    sentencia1; /* evaluación=verdadero */
-                                }
-                                else{
-                                    sentencia2; /* evaluación=falso */
-                                }
-
-
-                                if(n%2==0)
-                                {
-                                    printf("El numero es par: ");
-                                }
-                                else{
-                                    printf("El numero es impar: ");
-                                }
-
-          
-
-       • MÚLTIPLES - si…sino si…sino si…sino (if...else if...else if...else)
-
-                -Contiene más de dos líneas de ejecución que se construyen con más de una estructura de decisión.
-
-                -Es una estructura de decisión if/else que permite llevar dentro de sí misma otra estructura de tipo if/else, de esta manera se pueden anidar varias estructuras del mismo tipo, cada una con sus respectivas condiciones. 
-                
-                -Esta estructura siempre termina con la condición final else, que sucede cuando no se cumple ninguna de las condición anteriores.
-
-
-                                 if(condición con operadores relacionales)
-                                 {
-                                    sentencia1;
-                                 }
-                                 else if(condición2)
-                                     {
-                                        sentencia2;
-                                     }
-                                     else if(condición3)
-                                         {
-                                            sentencia3;
-                                         }
-                                         else
-                                             {
-                                                sentencia4;
-                                             }
-
-
-
-                                if(x>y)
-                                {
-                                    printf("%i es el mayor", x);
-                                }
-                                else if(y>x)
-                                    {
-                                        printf("%i es el mayor", y);
-                                    }
-                                    else
-                                        {
-                                            printf("Los numeros son iguales");
-                                        }
-
-
-
-▲ ESTRUCTURA SELECTORA - SWICH / CASE
+- Indica dos líneas de ejecución, en las cuales se definen cada una de las operaciones o instrucciones para realizar dependiendo de la evaluación de la condición.
+- Permite que el flujo de ejecución pueda seguir por cualquiera de los DOS caminos especificados (verdadero o falso).              
+- En este caso el problema sugiere que si la condición no se cumple, es decir, se obtiene un falso en la evaluación de la condición, el programa puede realizar otras operaciones.
   
-  Se denomina estructura de tipo "swich/case" ya que en lugar de tomar una decisión el usuario elige o selecciona un camino de ejecución dentro del programa, esta selección se realiza en función de un dato de E que define de manera precisa el camino a ejecutar.
+```c                                
+if(condición con operadores relacionales)
+  {
+    sentencia1; /* evaluación=verdadero */
+  }
+  else{
+      sentencia2; /* evaluación=falso */
+      }
+```
+```c 
+if  (n%2 == 0)
+  {
+    printf("El numero es par: ");
+  }
+  else{
+        printf("El numero es impar: ");
+      }
+```         
 
-  Esta variable es como "VARIABLE SELECTORA" y puede definir cualquiera de los datos o valores posibles de las opciones de ejecución. La variable selectora sólo puede ser de tipo numérica entera o de tipo caracter, sin permitir cadenas. 
+**• MÚLTIPLES - si…sino si…sino si…sino (if...else if...else if...else)**
 
-                                 swich(nombre_variable_selectora)
-                                 {
-                                    case opcion1:sentencia1;break;  /* case opcionN;sentenciaN;break; */
-                                    case opcion2:sentencia2;break;
-                                    case opcion3:sentencia3;break;  
+- Contiene más de dos líneas de ejecución que se construyen con más de una estructura de decisión.
+- Es una estructura de decisión if/else que permite llevar dentro de sí misma otra estructura de tipo if/else, de esta manera se pueden anidar varias estructuras del mismo tipo, cada una con sus respectivas condiciones.               
+- Esta estructura siempre termina con la condición final else, que sucede cuando no se cumple ninguna de las condición anteriores.
 
-                                    default:sentencia_error;break;  /* sentencia de error o incorrecta */
-                                 }
+```c 
+if(condición con operadores relacionales)
+  {
+    //sentencia 1
+  }
+  else if(condición2)
+          {
+            //sentencia 2
+          }
+          else if(condición3)
+                  {
+                    //sentencia 3
+                  }
+                  else
+                      {
+                        //sentencia 4
+                      }
+```
 
-                                 /* break rompe el flujo de ejecución de una instrucción */
+Ejemplo: 
 
-
-                                 swich(c1)
-                                 {
-                                    case 12:cos=min*5.75;break;
-                                    case 23:cos=min*7.25;break;
-                                    case 25:cos=min*6.50;break;
-                                    case 34:cos=min*9.20;break;
-
-                                    default:printf("clave incorrecta");break;
-                                 }
-
-
-                                 switch(d)
-                                 {
-                                    case 1:if(m>=2500)
-                                             {
-                                             m=m(m*0.15);
-                                             };break;
-
-
-                                    case 2:if(m>=3000)
-                                             {
-                                             m=m-(m*0.20);
-                                             };break;
-
-                                    case 3:if(m>=4500)
-                                             {
-                                             m=m-(m*0.20);
-                                             };break;
-
-                                    case 4:if(m>=1500)
-                                             {
-                                             m=m-(m*0.25);
-                                             };break;
-
-                                    default:printf("\n departamento incorrecto");break;
-                                 }
+```c
+if( x>y )
+  {
+   printf("%i es el mayor", x);
+  }
+  else if( y>x )
+        {
+          printf("%i es el mayor", y);
+        }
+        else
+            {
+              printf("Los numeros son iguales");
+            }
+```
 
 
+**▲ ESTRUCTURA SELECTORA - SWICH / CASE**
+  
+- Se denomina estructura de tipo "swich/case" ya que en lugar de tomar una decisión el usuario elige o selecciona un camino de ejecución dentro del programa, esta selección se realiza en función de un dato de E que define de manera precisa el camino a ejecutar.
+  
+- Esta variable es como "VARIABLE SELECTORA" y puede definir cualquiera de los datos o valores posibles de las opciones de ejecución. La variable selectora sólo puede ser de tipo numérica entera o de tipo caracter, sin permitir cadenas. 
+
+```c
+swich(nombre_variable_selectora)
+{
+  case opcion1:sentencia1;break;  /* case opcionN;sentenciaN;break; */
+  case opcion2:sentencia2;break;
+  case opcion3:sentencia3;break;  
+
+ default:sentencia_error;break;  /* sentencia de error o incorrecta */
+}
+```
+
+/* break rompe el flujo de ejecución de una instrucción */
+
+```c
+swich(c1)
+{
+case 12:cos=min*5.75;break;
+case 23:cos=min*7.25;break;
+case 25:cos=min*6.50;break;
+case 34:cos=min*9.20;break;
+
+default:printf("clave incorrecta");break;
+}
 
 
-▲ ESTRUCTURA DE REPETICIÓN O ITERACIÓN.
+switch(d)
+{
+case 1:if(m>=2500)
+{
+ m=m(m*0.15);
+};break;
 
-  -Son estructuras de control que permiten ejecutar de manera repetitiva una sentencia o un conjunto de ellas para resolver los problemas; estas estructuras están formadas por una decisión (condición) y el cuerpo del bucle que contiene las setencias que se repetirán.
 
-  -Estas setencias se repiten un número determinado de veces, mientras que la condición/es se cumplan, la ruptura o término del bucle, se debe producir cuando la condición dé un resultado falso.
+case 2:if(m>=3000)
+{
+m=m-(m*0.20);
+};break;
 
-  -Las estructuras de repitición tienen como principal ventaja la automatización de procesos y ejecuciones más rápidas, siempre que el diseño y la lógica de desarrollo sean correctas.
+case 3:if(m>=4500)
+{
+m=m-(m*0.20);
+};break;
 
-  -Las estructuras de repetición se pueden definir como "bucles precondicionales" (antes de las sentencias) y "bucles poscondicionales" (después de las sentencias), esto en relación al momento en que se lleva a cabo la evaluación de la condición.
+case 4:if(m>=1500)
+{
+m=m-(m*0.25);
+};break;
 
-            Precondicional - cuando la condición se evalua ANTES del cuerpo del bucle
-            Poscondicional - cuando la condición se evalua DESPUÉS del cuerpo del bucle 
+ default:printf("\n departamento incorrecto");break;
+}
+```
 
-  • Controladores de ruptura de bucle.
-    Los bucles tienen un conjunto de elementos de control de ruptura que les ayuda a terminar con las repeticiones, sirven para identificar el tipo de condición que debe llevar la estructura.
+
+
+**▲ ESTRUCTURA DE REPETICIÓN O ITERACIÓN.**
+
+- Son estructuras de control que permiten ejecutar de manera repetitiva una sentencia o un conjunto de ellas para resolver los problemas; estas estructuras están formadas por una decisión (condición) y el cuerpo del bucle que contiene las setencias que se repetirán.
+- Estas setencias se repiten un número determinado de veces, mientras que la condición/es se cumplan, la ruptura o término del bucle, se debe producir cuando la condición dé un resultado falso.
+- Las estructuras de repitición tienen como principal ventaja la automatización de procesos y ejecuciones más rápidas, siempre que el diseño y la lógica de desarrollo sean correctas.
+- Las estructuras de repetición se pueden definir como "bucles precondicionales" (antes de las sentencias) y "bucles poscondicionales" (después de las sentencias), esto en relación al momento en que se lleva a cabo la evaluación de la condición.
+```text
+Precondicional - cuando la condición se evalua ANTES del cuerpo del bucle
+Poscondicional - cuando la condición se evalua DESPUÉS del cuerpo del bucle
+```
+
+**• Controladores de ruptura de bucle.**
+Los bucles tienen un conjunto de elementos de control de ruptura que les ayuda a terminar con las repeticiones, sirven para identificar el tipo de condición que debe llevar la estructura.
      
-     Estos elementos son:
+Estos elementos son:
         
-        a) EVENTOS
+- a) EVENTOS
            
-           Son condiciones que provienen de variables externas que se actualizan dentro del cuerpo de bucle, los eventos pueden contener más de una condición para definir la ruptura del bucle.
-
-                                            x<1000 && x>1000
-
-                                            A>=10
-
-                                            B==5
-
+Son condiciones que provienen de variables externas que se actualizan dentro del cuerpo de bucle, los eventos pueden contener más de una condición para definir la ruptura del bucle.
+x<1000 && x>1000
+```c
+ A >= 10
+ B == 5
+```
         
-        b) VARIABLES DE TIPO CENTINELA
+- b) VARIABLES DE TIPO CENTINELA
            
-           Son variables que contienen un valor predefinido o valor esperado, en el cual se evalua en la condición para determinar una repetición.
+Son variables que contienen un valor predefinido o valor esperado, en el cual se evalua en la condición para determinar una repetición.
 
-                                            R='s'
-                                            C!=0
-                                            ¿Quieres repetir el ciclo? -Sí
+```c
+R ='s'
+C != 0
+
+¿Quieres repetir el ciclo? -Sí
+```
         
-        c) CONTADORES
+- c) CONTADORES
            
-           Son variables especiales que tienen como objetivos contar las repeticiones permitidas al bucle, por lo tanto, es necesario conocer por anticipado cuantas veces se repetirá.
+Son variables especiales que tienen como objetivos contar las repeticiones permitidas al bucle, por lo tanto, es necesario conocer por anticipado cuantas veces se repetirá.
 
-           N → longitud o límite del número de veces en el bucle
-                                            
-                                            CON<N 
-                                            CON1<N 
+N → longitud o límite del número de veces en el bucle
+```c                                            
+CON < N 
+CON1 < N 
+```
 
-► CONTADORES Y ACUMULADORES.
+**► CONTADORES Y ACUMULADORES.**
+
+**• CONTADORES:**
+
+Son variables de "tipo entero" que se incrementa o decrementa de manera constante cada vez que se realiza una repetición en el bucle.
+
+- 1) Todo contador debe INICIALIZARSE antes de ser usado, los valores iniciales pueden ser 0 o 1 o el valor máximo de repeticiones.
+
+- 2) Todo contador debe ACTUALIZARSE dentro del cuerpo del bucle, mediante las operaciones aritméticas + y -
+
+- 3) Todo contador interviene en la condición de la estructura de repitición.
+
+**• ACUMULADORES:**
+    
+- Son variables de "tipo decimal" que se incrementan o decrementan de forma variable durante las repeticiones dentro del bucle.
+
+- Los acumuladores se encargan de acumular valores que provienen de cálculos generados por el bucle.
+
+- Los acumuladores deben INICIALIZARSE antes de ser usados de acuerdo con los siguientes casos
+```text
+caso 1: cuando el acumulador varía por sumas decisivas, se INICIALIZA en 0.
+caso 2: cuando el acumulador varía por productos sucesivos, se INICIALIZA en 0.
+caso 3: cuando el acumulador varía por restas/divisiones sucesivas, se INICIALIZA en cualquier valor mayor a 0.
+```
   
-  • CONTADORES:
-    
-    -Son variables de "tipo entero" que se incrementa o decrementa de manera constante cada vez que se realiza una repetición en el bucle.
-
-    1) Todo contador debe INICIALIZARSE antes de ser usado, los valores iniciales pueden ser 0 o 1 o el valor máximo de repeticiones.
-
-    2) Todo contador debe ACTUALIZARSE dentro del cuerpo del bucle, mediante las operaciones aritméticas + y -
-
-    3) Todo contador interviene en la condición de la estructura de repitición.
-
-  • ACUMULADORES:
-    
-    -Son variables de "tipo decimal" que se incrementan o decrementan de forma variable durante las repeticiones dentro del bucle.
-
-    -Los acumuladores se encargan de acumular valores que provienen de cálculos generados por el bucle.
-
-    -Los acumuladores deben INICIALIZARSE antes de ser usados de acuerdo con los siguientes casos
-
-    caso 1: cuando el acumulador varía por sumas decisivas, se INICIALIZA en 0.
-    caso 2: cuando el acumulador varía por productos sucesivos, se INICIALIZA en 0.
-    caso 3: cuando el acumulador varía por restas/divisiones sucesivas, se INICIALIZA en cualquier valor mayor a 0.
-
-
-    
-▲ ESTRUCTURA DE REPETICIÓN POSCONDICIONAL - DO WHILE (hacer-mientras)
+**▲ ESTRUCTURA DE REPETICIÓN POSCONDICIONAL - DO WHILE (hacer-mientras)**
   
-  En esta estructura de repitición poscondicional se evalua al final o después del cuerpo del bucle, esto implica que el ciclo SE DEBE EJECUTAR POR LO MENOS UNA VEZ.
+En esta estructura de repitición poscondicional se evalua al final o después del cuerpo del bucle, esto implica que el ciclo SE DEBE EJECUTAR POR LO MENOS UNA VEZ.
 
-  La estructura de control "do while" es adecuada cuando no sabemos el número de veces que se debe repetir un ciclo, pero conocemos que se debe ejecutar por lo menos una vez. Es decir, se ejecuta el conjunto de instrucciones una vez y luego cada vez que corresponde se inicia nuevamente el ciclo se evaluan las condiciones, siempre al final del conjunto de instrucciones. Si el resultado es verdadero (diferente de 0) se continua con la ejecución, de otra manera se detiene.
+La estructura de control "do while" es adecuada cuando no sabemos el número de veces que se debe repetir un ciclo, pero conocemos que se debe ejecutar por lo menos una vez. Es decir, se ejecuta el conjunto de instrucciones una vez y luego cada vez que corresponde se inicia nuevamente el ciclo se evaluan las condiciones, siempre al final del conjunto de instrucciones. Si el resultado es verdadero (diferente de 0) se continua con la ejecución, de otra manera se detiene.
+La estructura "do while" puede utilizarse de manera eficiente para verificar los datos de E de un programa.
 
-  La estructura "do while" puede utilizarse de manera eficiente para verificar los datos de E de un programa.
+```c
+do                 
+  {
+    sentencias;
+  }while (condición / evaluación de la respuesta de usuario); /* variable de tipo CENTINELA */
+ ```
 
-                   do                 
-                   {
-                    sentencias;
-                    .
-                    .
-                    .
-                    } while (condición / evaluación de la respuesta de usuario); /* variable de tipo CENTINELA */
-
-
-                    do
-                    {
-                      printf("Ingresa el sueldo: ");
-                      scantf("%f", &suel);
-                      num=num+suel;
-                      printf("¿Tienes otro sueldo?");
-                      scantf("%s", &resp);
-                    } 
-                    while (resp=='S'||resp=='s');   /* ";" es la única estructura de rep que lo utiliza */
+```c
+do
+  {
+    printf("Ingresa el sueldo: ");
+    scantf("%f", &suel);
+    num = num + suel;
+    printf("¿Tienes otro sueldo?");
+    scantf("%s", &resp);
+  } while (resp == 'S'|| resp == 's');   /* ";" es la única estructura de rep que lo utiliza */
+```
                                  
 
+**▲ ESTRUCTURA DE REPETICIÓN PRECONDICIONAL - WHILE (mientras)**
 
-▲ ESTRUCTURA DE REPETICIÓN PRECONDICIONAL - WHILE (mientras)
+La estructura de control "while" es precondicional porque la condición de ruptura de bucle se evalua antes de realizar las sentencias de repetición, por lo tanto, la estructura while requiere de datos predefinidos o requeridos con anticipación para poder evaluarlos. 
 
-  La estructura de control "while" es precondicional porque la condición de ruptura de bucle se evalua antes de realizar las sentencias de repetición, por lo tanto, la estructura while requiere de datos predefinidos o requeridos con anticipación para poder evaluarlos. 
+La estructura while en relación en que es precondicional puede no ejecutarse durante su desarrollo, los elementos que controlan la ruptura de bucle while pueden ser EVENTOS, variables de tipo CENTINELA Y CONTADORES.
+-DEPENDE DE LA CONDICIÓN.
+-PUEDE QUE NUNCA SE EJECUTE.
 
-  La estructura while en relación en que es precondicional puede no ejecutarse durante su desarrollo, los elementos que controlan la ruptura de bucle while pueden ser EVENTOS, variables de tipo CENTINELA Y CONTADORES.
-
-     -DEPENDE DE LA CONDICIÓN.
-     -PUEDE QUE NUNCA SE EJECUTE.
-
-                   while (condición/es)   /* "sin ;" */
-                   {
-                    sentencias;
-                    .
-                    .
-                    .
-                   }
+```c
+while (condición/es)   /* "sin ;" */
+      {
+        sentencias;
+      }
+```
                                     
 
+**▲ ESTRUCTURA DE REPETICIÓN PRECONDICIONAL - FOR (por)**
 
-▲ ESTRUCTURA DE REPETICIÓN PRECONDICIONAL - FOR (por)
+La estructura de control "for" es un bucle de propósito general controlado únicamente por un CONTADOR, para simplificar su escritura y mejorar su velocidad de ejecución.
 
-  La estructura de control "for" es un bucle de propósito general controlado únicamente por un CONTADOR, para simplificar su escritura y mejorar su velocidad de ejecución.
+La sentencia for se utiliza en problemas cuando el número de repeticiones se conoce por anticipado ya sea por una "constante" o la variable "N".
 
-  La setencia for se utiliza en problemas cuando el número de repeticiones se conoce por anticipado ya sea por una "constante" o la variable "N".
+-Ventajas de la estructura for:
+Es que permite que en la cabecera de construcción se defina de manera completa los elementos de control de bucle.
 
-    -Ventajas de la estructura for:
-      Es que permite que en la cabecera de construcción se defina de manera completa los elementos de control de bucle.
+```c
+for(expresión1;...)    /* sin ";" , se ocupa el cont - contador*/
+    {
+      sentencia;/* cuerpo del bucle */
+    }
+```
+```c
+for(cont=1; cont<=n ; cont = cont+1)   /* cont=cont+1 → cont++ */
+    {
+      printf("%i", cont);
+    }
+```
 
-                     for(expresión1;...)    /* sin ";" , se ocupa el cont - contador*/
-                     {
-                      sentencia;
-                      .                     /* cuerpo del bucle */
-                      .
-                      .
-                     }
-
-
-                     for(cont=1;cont<=n;cont=cont+1)   /* cont=cont+1 → cont++ */
-                     {
-                      printf("%i", cont);
-                     }
-
-
-
-▲ ESTRUCTURA FOR ANIDADA.
+**▲ ESTRUCTURA FOR ANIDADA.**
   
-  La estructura for puede contenerse dentro de sí misma otra estructura for, en las cuales pueden ser controladas por un mismo o diversos CONTADORES, y de esta manera generar aplicaciones de propósito específico, como por ejemplo el uso de matrices o arreglos bidimensionales.
+La estructura for puede contenerse dentro de sí misma otra estructura for, en las cuales pueden ser controladas por un mismo o diversos CONTADORES, y de esta manera generar aplicaciones de propósito específico, como por ejemplo el uso de matrices o arreglos bidimensionales.
 
-                     for(expresión1;...)
-                     {
-                      for(expresión;...)
-                         {
-                          sentencia;
-                          .
-                          .
-                          .
-                         }
-                      sentencia;
-                     }  
+```c
+for(expresión1;...)
+    {
+      //sentencia;
+    for(expresión;...)
+        {
+          //sentencia;
+        }
+        //sentencia;
+    }
+```
 
 
+**ESTRUCTURAS DE DATOS ESTÁTICOS.**
 
-                                        ESTRUCTURAS DE DATOS ESTÁTICOS.
-
-  ▲ ARREGLOS UNIDIMENSIONALES.
+**▲ ARREGLOS UNIDIMENSIONALES.**
     
-    • ARREGLO:
-                Es un conjunto de variables del mismo tipo que tienen el mismo nombre y se diferencian en el índice.
+• ARREGLO:
+Es un conjunto de variables del mismo tipo que tienen el mismo nombre y se diferencian en el índice.
 
-        -Características:
-                1. Finita    - definida 
-                2. Homogénea - Son del mismo tipo 
-                3. Ordenada  - Índice
+```text
+-Características:
+1. Finita    - definida 
+2. Homogénea - Son del mismo tipo 
+3. Ordenada  - Índice
+```
+```text
+-Tipos de datos que pueden almacenar:
+1. Enteros
+2. Decimales
+3. Caracteres
+```
 
-        -Tipos de datos que pueden almacenar:
-                1. Enteros
-                2. Decimales
-                3. Caracteres
+• USO DE ARREGLOS EN LENGUAJE C.
+ Un arreglo debe declararse antes de usarse como cualquier variable en lenguaje C.
 
-   • USO DE ARREGLOS EN LENGUAJE C.
-     Un arreglo debe declararse antes de usarse como cualquier variable en lenguaje C.
+  `#define` **VARIABLE** *VALOR*
 
-                 #define VARIABLE VALOR
+`tipo_dato` **NOMBRE_ARREGLO** *[longitud_arreglo];*  <br> `int` **VECTOR** *[100];*
 
-                 tipo_dato NOMBRE_ARREGLO[longitud_arreglo];  →  int VECTOR[100];
-
-                 tipo_dato int, float, double, char
-                 longitud_arreglo - Número total de elementos o dimensión del arreglo 
+tipo_dato int, float, double, char
+longitud_arreglo - Número total de elementos o dimensión del arreglo 
 
 
-                 #define N 30
-
-                 int VECTOR[N];
+#define N 30
+int VECTOR[N];
 
 *NOTA: No hay que confundirse. En la declaración del array el número entre corchetes es el número de elementos,en cambio cuando ya usamos la matriz el número entre corchetes es el índice. 
 
-  • ACCESO Y PROCESAMIENTO DE UN ARREGLO.
-    La manipulación de los arreglos se pueden hacer de dos formas principales:
+• ACCESO Y PROCESAMIENTO DE UN ARREGLO.
+La manipulación de los arreglos se pueden hacer de dos formas principales:
 
-    1. INDIVIDUALES:
-                    Los elementos se pueden procesar de manera separada e independiente, con la restricción de especificar de manera precisa la posición o el índice del elemento particular.
-
-
-    2. CONJUNTO o AUTOMÁTICO:
-                   Cuando se desea procesar a todos los elementos del arreglo a la vez, se utiliza una estructura repetitiva para automatizar el proceso, de manera estricta con una estructura de tipo for.
-
-                   Se utilizan dos subrutinas básicas que de manera independiente manipulan cada faceta de operación con el arreglo, como por ejemplo: la creación, la impresión y cualquier otro procesamiento de los datos.
+1. INDIVIDUALES:
+Los elementos se pueden procesar de manera separada e independiente, con la restricción de especificar de manera precisa la posición o el índice del elemento particular.
 
 
-► DECLARACIÓN DE UN ARRAY.  
+1. CONJUNTO o AUTOMÁTICO:
+    Cuando se desea procesar a todos los elementos del arreglo a la vez, se utiliza una estructura repetitiva para automatizar el proceso, de manera estricta con una estructura de tipo for.
+
+Se utilizan dos subrutinas básicas que de manera independiente manipulan cada faceta de operación con el arreglo, como por ejemplo: la creación, la impresión y cualquier otro procesamiento de los datos.
+
+
+**► DECLARACIÓN DE UN ARRAY.**
                       
-                      tipo_dato NOMBRE_ARREGLO[longitud_arreglo];  →  int VECTOR[100];
+`tipo_dato` **NOMBRE_ARREGLO** *[longitud_arreglo];*  <br>  `int` **VECTOR** *[100];*
 
-► SOBRE LA DIMENSIÓN DE UN ARRAY.
+**► SOBRE LA DIMENSIÓN DE UN ARRAY.**
   
-  • Definir en la sección - 1, donde se escriben las bibliotecas
+• Definir en la sección - 1, donde se escriben las bibliotecas
     
-    #define ELEMENTOS 24
-    
-  •
+  `#define` **ELEMENTOS** *24*
 
-  •
+**► INICIALIZAR UN ARRAY.**
 
-  •
+Se pueden inicializar los arrays al declararlos igual que hacíamos con las variables.
+```c
+  int horas = 24;
+```
 
-► INICIALIZAR UN ARRAY.
-  Se pueden inicializar los arrays al declararlos igual que hacíamos con las variables.
+*NOTA: Fíjate que para recorrer del elemento 0 al 23 (24 elementos) hacemos: for(hora=0; hora<24; hora++). La condición es que hora sea menos de 24. También podíamos haber hecho que hora != 24. 
 
-  int horas=24;
+- Método alternativo - más elementos en el arreglo
+int TEMPERATURAS[]={11,...};
 
-  *NOTA: Fíjate que para recorrer del elemento 0 al 23 (24 elementos) hacemos: for(hora=0; hora<24; hora++). La condición es que hora sea menos de 24. También podíamos haber hecho que hora != 24. 
+Ahora vamos a ver el caso contrario, metemos más datos de los reservados. Vamos a meter 25 en vez de 24. Si hacemos esto dependiendo del compilador obtendremos un error o al menos un warning (aviso). En unos compiladores el programa se creará y en otros no, pero aún así nos avisa del fallo. Debe indicarse que estamos intentando guardar un dato de más, no hemos reservado memoria para él.
 
-  -Método alternativo - más elementos en el arreglo
-   int TEMPERATURAS[]={11,...};
+- Método alternativo "SIZEOF"
 
-          Ahora vamos a ver el caso contrario, metemos más datos de los reservados. Vamos a meter 25 en vez de 24. Si hacemos esto dependiendo del compilador obtendremos un error o al menos un warning (aviso). En unos compiladores el programa se creará y en otros no, pero aún así nos avisa del fallo. Debe indicarse que estamos intentando guardar un dato de más, no hemos reservado memoria para él.
-
-  -Método alternativo "SIZEOF"
-
-          Dividir el tamaño de la matriz entre el tamaño de sus ELEMENTOS y tenemos números el número de elementos.
+ Dividir el tamaño de la matriz entre el tamaño de sus ELEMENTOS y tenemos números el número de elementos.
   
-   elementos=sizeof temperaturas / sizeof (int);
+elementos=sizeof temperaturas / sizeof (int);
 
-► RECORRER UN ARRAY.
+**► RECORRER UN ARRAY.**
+  ```c
+int temperaturas[24] = {11,...};
+for(hora=0; hora<24; hora++)
+  ```
   
-  int temperaturas[24]={11,...};
-  for(hora=0; hora<24; hora++)
-  
-          Vemos que a partir del elemento 24 (incluído) tenemos resultados extraños. Esto es porque nos hemos salido de los límites del array e intenta acceder al elemento temperaturas[25] y sucesivos que no existen. Así que nos muestra el contenido de la memoria que está justo detrás de temperaturas[23] (esto es lo más probable) que puede ser cualquiera. Al contrario que otros lenguajes C no comprueba los límites de los array, nos deja saltárnoslos a la torera. Este programa no da error al compilar ni al ejecutar, tan sólo devuelve resultados extraños. Tampoco bloqueará el sistema porque no estamos escribiendo en la memoria sino leyendo de ella.
-          Otra cosa muy diferente es meter datos en elementos que no existen. El sistema se BLOQUEA.
+Vemos que a partir del elemento 24 (incluído) tenemos resultados extraños. Esto es porque nos hemos salido de los límites del array e intenta acceder al elemento temperaturas[25] y sucesivos que no existen. Así que nos muestra el contenido de la memoria que está justo detrás de temperaturas[23] (esto es lo más probable) que puede ser cualquiera. Al contrario que otros lenguajes C no comprueba los límites de los array, nos deja saltárnoslos a la torera. Este programa no da error al compilar ni al ejecutar, tan sólo devuelve resultados extraños. Tampoco bloqueará el sistema porque no estamos escribiendo en la memoria sino leyendo de ella.
+Otra cosa muy diferente es meter datos en elementos que no existen. El sistema se BLOQUEA.
 
 
-  ► ARREGLOS unidimensional - NUMÉRICOS.
+**► ARREGLOS unidimensional - NUMÉRICOS.**
 
 
 
-  ► ARREGLOS unidimensional DE CARACTERES.
-
+**► ARREGLOS unidimensional DE CARACTERES.**
+```c
 for (size_t i = 0; i < count; i++)
 {
     /* code */
@@ -955,8 +1008,9 @@ if (/* condition */)
 {
   /* code */
 }
+```
 
-
+```c
 do
 {
   /* code */
@@ -967,7 +1021,9 @@ while (/* condition */)
 {
   /* code */
 }
+```
 
+```c
 switch (expression)
 {
 case /* constant-expression */:
@@ -977,116 +1033,129 @@ case /* constant-expression */:
 default:
   break;
 }
+```
+
+**▲ ARREGLOS BIDIMENSIONALES.**
+
+En los lenguajes de programación están implementados los arreglos de dos dimensiones o bidimensionales conocidos como matrices.
+
+`tipo_dato` **NOMBRE_MATRIZ** *[longitud_renglones] [longitud_columnas];*
+
+```c
+int MATRIZ[R][C];  /* F y C están previamente definidas #define */
+
+float MAT[5][5];
+double M[20][30];
+```
 
 
-▲ ARREGLOS BIDIMENSIONALES.
-
-  En los lenguajes de programación están implementados los arreglos de dos dimensiones o bidimensionales conocidos como matrices.
-
-              tipo_dato NOMBRE_MATRIZ[longitud_renglones][longitud_columnas];
-
-              int MATRIZ[R][C];  /* F y C están previamente definidas #define */
-
-              float MAT[5][5];
-              double M[20][30];
-
-
-         * NOTA: Al igual que los arreglos unidimensionales se pueden definir las constantes de longitud máxima para las filas y las columnas.
+* NOTA: Al igual que los arreglos unidimensionales se pueden definir las constantes de longitud máxima para las filas y las columnas.
   
-  Una matriz puede utilizar cualquiera de las operaciones definidas por el diagrama de flujo, como son: entrada, salida, proceso y evaluación de condición. 
+Una matriz puede utilizar cualquiera de las operaciones definidas por el diagrama de flujo, como son: entrada, salida, proceso y evaluación de condición. 
    
-  La sintaxis para definirla se establece a través del manejo de sus indices en el siguiente orden, primero la fila representada por el indice [ i ] y despues la columna representada por el indice [ j ].
+La sintaxis para definirla se establece a través del manejo de sus indices en el siguiente orden, primero la fila representada por el indice [ i ] y despues la columna representada por el indice [ j ].
             
-              [i] - RENGLONES o FILAS
-              [j] - COLUMNAS
+    [i] - RENGLONES o FILAS
+    [j] - COLUMNAS
 
 
-  • ACCESO A LAS MATRICES DE FORMA INDIVIDUAL O DIRECTO A UN SOLO ELEMENTO.
+**• ACCESO A LAS MATRICES DE FORMA INDIVIDUAL O DIRECTO A UN SOLO ELEMENTO.**
+```c  
+NOMBRE_ MATRIZ[renglones][columna];
+MAT[0][3];
+```
+
+Ejemplos:
+
+```c
+printf(“El elemento es: %f”,mat[0][3]); //Imprime el dato que se encuentra en la posición de la fila 0 y la columna 3.
+A=matriz[0][1]*B; //Calcula la multiplicación del dato en la posicion fila 0, columna 1 por el valor de la variable B y se almacena en la variable A.
+scanf(“%d”, &m[3][4]); //Almacena un valor en el elemento de la matriz que está en la posición fila 3 y columna4.
+```
+
+**• ACCESO A LAS MATRICES DE FORMA AUTOMATICA O EN CONJUNTO.**
     
-    NOMBRE_ MATRIZ[renglones][columna];
-    MAT[0][3];
+El acceso se realiza mediante el recorrido a través de las filas o las culumnas de la matriz, utilizando la estructura for anidada, el recorrido básico siempre es a través de las filas.
 
-    Ejemplos:
 
-    printf(“El elemento es: %f”,mat[0][3]); //Imprime el dato que se encuentra en la posición de la fila 0 y la columna 3.
-    A=matriz[0][1]*B; //Calcula la multiplicación del dato en la posicion fila 0, columna 1 por el valor de la variable B y se almacena en la variable A.
-    scanf(“%d”, &m[3][4]); //Almacena un valor en el elemento de la matriz que está en la posición fila 3 y columna4.
-
-  • ACCESO A LAS MATRICES DE FORMA AUTOMATICA O EN CONJUNTO.
+**► PROCESAMIENTO DE LA MATRIZ POR RENGLONES O FILAS. ** 
     
-    El acceso se realiza mediante el recorrido a través de las filas o las culumnas de la matriz, utilizando la estructura for anidada, el recorrido básico siempre es a través de las filas.
-
-
-  ► PROCESAMIENTO DE LA MATRIZ POR RENGLONES O FILAS.  
-    
-FUNCION: CREAR_MATRIZ().
-
-void CREAR_MATRIZ(int mat[][C],int &n, int &m)
+FUNCIÓN: `CREAR_MATRIZ ()`
+```c
+void CREAR_MATRIZ (int mat[][C], int &n, int &m)
 {
-int i,j;
-for(i=0;i<n;i++)
-{
-for(j=0;j<m;j++)
-{
-printf(“Ingresa el dato: ”);
-scanf(“%d”,&mat[i][j]);
+  int i,j;
+
+  for(i=0; i<n; i++)
+      {
+        for(j=0; j<m; j++)
+            {
+              printf(“Ingresa el dato: ”);
+              scanf(“%d”,&mat[i][j]);
+            }
+      }
 }
-}
-}
+```
 
 
--FUNCION: IMPRIMIR_MATRIZ().
-
+-FUNCION: `IMPRIMIR_MATRIZ()`
+```c
 void IMPRIMIR_MATRIZ(int mat[][C],int &n, int &m)
 {
-int i,j;
-for(i=0;i<n;i++)
-{
-for(j=0;j<m;j++)
-{
-printf(“ %d ”,mat[i][j]);
+  int i,j;
+
+  for(i=0;i<n;i++)
+      {
+        for(j=0;j<m;j++)
+            {
+              printf(“ %d ”,mat[i][j]);
+            }
+        printf(“\n”);
+      }
 }
-printf(“\n”);
-}
-}
+```
 
- ► PROCESAMIENTO DE LA MATRIZ POR COLUMNAS.
+ **► PROCESAMIENTO DE LA MATRIZ POR COLUMNAS.**
 
- -FUNCION: CREAR_MATRIZ().
+ -FUNCION: `CREAR_MATRIZ()`
 
-
+```c
 void CREAR_MATRIZ(int mat[][C],int &n, int &m)
 {
-int i,j;
-for(j=0;j<m;j++)
-{
-for(i=0;i<n;i++)
-{
-printf(“Ingresa el dato: ”);
-scanf(“%d”,&mat[i][j]);
+  int i,j;
+
+  for(j=0; j<m; j++)
+      {
+        for(i=0;i<n;i++)
+            {
+              printf(“Ingresa el dato: ”);
+              scanf(“%d”,&mat[i][j]);
+            }
+      }
 }
-}
-}
+```
 
 
--FUNCION: IMPRIMIR_MATRIZ().
+-FUNCION: `IMPRIMIR_MATRIZ()`
 
-
+```c
 void IMPRIMIR_MATRIZ(int mat[][C],int &n, int &m)
 {
-int i,j;
-for(i=0;i<n;j++)
-{
-for(j=0;j<m;i++)
-{
-printf(“ %d ”,mat[i][j]);
-}
-printf(“\n”);
-}
-}
+  int i,j;
 
-EJEMPLO DE PROGRAMA PRINCIPAL.
+  for(i=0; i<n; j++)
+      {
+        for(j=0;j<m;i++)
+            {
+              printf(“ %d ”,mat[i][j]);
+            }
+        printf(“\n”);
+      }
+}
+```
 
+**EJEMPLO DE PROGRAMA PRINCIPAL.**
+```c
 #include <conio.h>
 #include <stdio.h>
 #define F 20
@@ -1097,32 +1166,27 @@ void IMPRIMIR_MATRIZ(int [][C],int &, int &);
 
 void main()
 {
-int N,M,MATRIZ[F][C];
-printf(“Cuantas filas: ");
-scanf("%d",&N);
-printf(“Cuantas columnas: ");
-scanf("%d",&M);
-CREAR_MATRIZ(MATRIZ,N,M);
-IMPRIMIR_MATRIZ(MATRIZ,N,M);
-getch();
+  int N,M,MATRIZ[F][C];
+  printf(“Cuantas filas: ");
+  scanf("%d",&N);
+  printf(“Cuantas columnas: ");
+  scanf("%d",&M);
+  CREAR_MATRIZ(MATRIZ,N,M);
+  IMPRIMIR_MATRIZ(MATRIZ,N,M);
+  getch();
 }
+```
+• EJEMPLO EJERCICIO.
+Desarrollar la codificación de un programa que contiene las calificaciones de las 3 evaluaciones departamentales de N alumnos, el programa calcula el promedio grupal por departamental y tambien indica cuál es la calificación más alta y la más baja de los tres departamentales.
 
-   • EJEMPLO EJERCICIO.
-     Desarrollar la codificación de un programa que contiene las calificaciones de las 3 evaluaciones departamentales de N alumnos, el programa calcula el promedio grupal por departamental y tambien indica cuál es la calificación más alta y la más baja de los tres departamentales.
+*El almacenamiento se realiza por columna debido a que cada columna representa cada uno de los tres departamentales y las filas representan a cada uno de los N alumnos evaluados.
+*Para calcular la calificación mas alta se realiza un recorrido por toda la matriz comparando las calificaciones entre sí, se utiliza la variable CALTA para almacenar la calificación alta que se tenga en ese instante, para evaluar esta condición, CALTA necesita un valor inicial en este caso es 0 debido a que la primera calificación que se evalue será la mas alta y se tendrá como referencia para la siguiente evaluación, que decidirá si esa es la califiación mayor o se sutituye por la actual, así se ira evaluando hasta terminar el recorrido de la matriz y entonces CALTA tendrá la calificación mas alta que se devolverá al programa principal.
+*El mismo proceso se realiza para encontrar la calificación baja, sólo que esta vez la variable CBAJA se inicializa con 10 debido a que de esta manera la primera calificación que se evalue cumpla con la condición de ser la primera calificación baja y pueda tomarse como referencia para las siguientes evaluaciones.
+*Se realiza el proceso para calcular el promedio por cada uno de los departamentales, en este caso, se procesa por cada una de las columnas de la matriz, considerando que la columna 0 corresponde al primer departamental, la columna 1 al segundo y la columna 2 al tercero. 
+*Observar que por esta razón el procesamiento es como si fuera un vector, utilizando solo una estructura for y dejando fijo el valor de la columna en el procesamiento.
+*El procesamiento se realiza como si fuera un vector y por columna, por esa razón sólo se define una estructura FOR y observe que el índice de la columna permanece fijo para cada estructura FOR; ésto indica que sólo se sumarán los elementos de esa columna que corresponden a ese departamental. Cada estructura FOR realiza el proceso por separado para cada columna, al final se calculan los promedios con la suma de cada departamental dividido entre los N alumnos.
 
-     *El almacenamiento se realiza por columna debido a que cada columna representa cada uno de los tres departamentales y las filas representan a cada uno de los N alumnos evaluados.
-     
-     *Para calcular la calificación mas alta se realiza un recorrido por toda la matriz comparando las calificaciones entre sí, se utiliza la variable CALTA para almacenar la calificación alta que se tenga en ese instante, para evaluar esta condición, CALTA necesita un valor inicial en este caso es 0 debido a que la primera calificación que se evalue será la mas alta y se tendrá como referencia para la siguiente evaluación, que decidirá si esa es la califiación mayor o se sutituye por la actual, así se ira evaluando hasta terminar el recorrido de la matriz y entonces CALTA tendrá la calificación mas alta que se devolverá al programa principal.
-     
-     *El mismo proceso se realiza para encontrar la calificación baja, sólo que esta vez la variable CBAJA se inicializa con 10 debido a que de esta manera la primera calificación que se evalue cumpla con la condición de ser la primera calificación baja y pueda tomarse como referencia para las siguientes evaluaciones.
-
-      *Se realiza el proceso para calcular el promedio por cada uno de los departamentales, en este caso, se procesa por cada una de las columnas de la matriz, considerando que la columna 0 corresponde al primer departamental, la columna 1 al segundo y la columna 2 al tercero. 
-      
-      *Observar que por esta razón el procesamiento es como si fuera un vector, utilizando solo una estructura for y dejando fijo el valor de la columna en el procesamiento.
-
-     *El procesamiento se realiza como si fuera un vector y por columna, por esa razón sólo se define una estructura FOR y observe que el índice de la columna permanece fijo para cada estructura FOR; ésto indica que sólo se sumarán los elementos de esa columna que corresponden a ese departamental. Cada estructura FOR realiza el proceso por separado para cada columna, al final se calculan los promedios con la suma de cada departamental dividido entre los N alumnos.
-
-
+```c
 #include <conio.h>
 #include <stdio.h>
 #define F 50
@@ -1249,11 +1313,12 @@ printf("\nEl promedio del primer departamental es: %0.1f",prom1);
 printf("\nEl promedio del segundo departamental es: %0.1f",prom2);
 printf("\nEl promedio del tercer departamental es: %0.1f",prom3);
 }
+```
 
 
     • EJERCICIO.
        Desarrollar la codificación de un programa que crea e imprime una matriz de numeros enteros de longitud NxM. El programa cuenta cuantos numeros pares e impares contiene y tambien cuantos negativos y positivos.
-
+```c
 #include <conio.h>
 #include <stdio.h>
 #define F 20
@@ -1328,13 +1393,13 @@ printf("\nLa matriz tiene %d numeros impares.",contI);
 printf("\nLa matriz tiene %d numeros positivos.",contPos);
 printf("\nLa matriz tiene %d numeros negativos.",contNeg);
 }
+```
+
+**► ARREGLOS unidimensional - NUMÉRICOS.**
 
 
-  ► ARREGLOS unidimensional - NUMÉRICOS.
 
-
-
-  ► ARREGLOS unidimensional DE CARACTERES.
+**► ARREGLOS unidimensional DE CARACTERES.**
     
     Son conocidos como cadenas de caracteres y es un tipo especial de arreglos, pues se trata de 
 un conjunto de datos tipo char, que termina con un caracter nulo(“\0”), los elementos de un 
@@ -1480,7 +1545,7 @@ tipo carácter y arreglos unidimensionales o bidemensionales.
 
 
 
-▲ APUNTADORES.
+**▲ APUNTADORES.**
 
 
 
