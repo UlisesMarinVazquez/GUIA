@@ -172,7 +172,7 @@ Los compiladores requieren forzosamente un Intérprete.
 
 `AMBIENTE INTEGRAL EN C:`
 1. Estructuras de control SECUENCIALES 
-2. Estructuras de control ALTERNATIVAS
+2. Estructuras de control DECISIÓN
 3. Estructuras de control REPETITIVAS
 
 ## TIPOS DE OPERADORES EN C ESTÁNDAR.
@@ -751,13 +751,13 @@ m=m-(m*0.25);
 
 **▲ ESTRUCTURA DE REPETICIÓN O ITERACIÓN.**
 
-- Son estructuras de control que permiten ejecutar de manera repetitiva una sentencia o un conjunto de ellas para resolver los problemas; estas estructuras están formadas por una decisión (condición) y el cuerpo del bucle que contiene las setencias que se repetirán.
-- Estas setencias se repiten un número determinado de veces, mientras que la condición/es se cumplan, la ruptura o término del bucle, se debe producir cuando la condición dé un resultado falso.
+- Son estructuras de control que permiten ejecutar de manera repetitiva una sentencia o un conjunto de ellas para resolver los problemas; estas estructuras están formadas por una decisión (condición) y el cuerpo del bucle que contiene las sentencias que se repetirán.
+- Estas sentencias se repiten un número determinado de veces, mientras que la condición/es se cumplan, la ruptura o término del bucle, se debe producir cuando la condición dé un resultado falso.
 - Las estructuras de repitición tienen como principal ventaja la automatización de procesos y ejecuciones más rápidas, siempre que el diseño y la lógica de desarrollo sean correctas.
 - Las estructuras de repetición se pueden definir como "bucles precondicionales" (antes de las sentencias) y "bucles poscondicionales" (después de las sentencias), esto en relación al momento en que se lleva a cabo la evaluación de la condición.
 ```text
-Precondicional - cuando la condición se evalua ANTES del cuerpo del bucle
-Poscondicional - cuando la condición se evalua DESPUÉS del cuerpo del bucle
+Precondicional - cuando la condición se evalúa ANTES del cuerpo del bucle
+Poscondicional - cuando la condición se evalúa DESPUÉS del cuerpo del bucle
 ```
 
 **• Controladores de ruptura de bucle.**
@@ -768,8 +768,9 @@ Estos elementos son:
 - a) EVENTOS
            
 Son condiciones que provienen de variables externas que se actualizan dentro del cuerpo de bucle, los eventos pueden contener más de una condición para definir la ruptura del bucle.
-x<1000 && x>1000
+
 ```c
+x<1000 && x>1000
  A >= 10
  B == 5
 ```
